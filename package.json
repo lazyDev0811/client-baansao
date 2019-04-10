@@ -1,0 +1,20 @@
+{
+  "name": "wilder-than-the-wind-gridsome",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.3.0",
+    "@gridsome/transformer-remark": "^0.2.1",
+    "aos": "^2.3.4",
+    "gridsome": "^0.5.0",
+    "vue-owl-carousel": "^2.0.3"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0"
+  }
+}
