@@ -4,7 +4,7 @@
 
   <head>
     <title>Wilder than the Wind &mdash; Edmonton Art Studio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="assets/css/aos.css">
@@ -23,7 +23,7 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>
 
     <div class="site-block-1">
       <div class="container">
@@ -37,7 +37,7 @@
                 <h3>Art Workshops</h3>
                 <p>Check out our current classes on offer</p>
               </div>
-            </a>   
+            </a>
           </div>
           <div class="col-lg-4">
             <a href="#" class="site-block-feature d-flex p-4 rounded mb-4">
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    
+
 
     <div class="site-section">
       <div class="container">
@@ -79,7 +79,7 @@
             <span class="sub-title">What Types of Classes Do We Offer?</span>
             <h2 class="font-weight-bold text-black mb-5">Popular Art Workshops:</h2>
             <div class="accordion" id="accordionExample">
-              
+
               <h2 class="mb-0 border rounded mb-2">
                 <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   1. Ink, Resins, and Crystals Art
@@ -91,7 +91,7 @@
                   <p>Escape into the world of <a href="https://www.facebook.com/events/1951925708450518/">glassy resin, crystals and semi precious stones</a> such as Jasper, Turquoise, hematite, quartz, and more. In this 3-hour art escape, we discover how to create a vivid abstract alcohol-ink painting on a birch panel – with glitter, semi precious stones and crystals adding to the effects. We will also learn how to use resin on paintings (requiring a 12-hour cure time, to be picked up a later time). No prior experience needed, and all materials (including your choice of many crystals will be provided), and a handout will be emailed to you so you can replicate the techniques we practiced.</p>
                 </div>
               </div>
-            
+
               <h2 class="mb-0 border rounded mb-2">
                 <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   2. Edgy Abstracts Art
@@ -109,7 +109,7 @@
                   3. Birch Trees Art Escape
                 </button>
               </h2>
-              
+
               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
                   <p>In this art escape, we discover how to <a href="https://www.facebook.com/events/654900431606115/">paint a birch treeline</a> with a background on yupo paper mounted to a 9x12 birch panel. Time permitting, we also do some additional intuitive fluid painting on tiles as a bonus. You will receive lots of instruction, but will choose your own colours for the sky and leaves and any changes you desire.</p>
@@ -135,7 +135,7 @@
       </div>
     </div>
 
-    
+
 <div class="container site-section block-13 testimonial-wrap">
    <div class="row">
       <div class="col-12 text-center">
@@ -173,10 +173,10 @@
             </carousel>
          </div>
       </div>
-      
+
    </div>
 </div>
-      
+
 
     <div class="site-section">
       <div class="container">
@@ -226,8 +226,280 @@
 export default {
   metaInfo: {
     title: 'Wilder than the Wind - Edmonton'
-  }
+  },
+  mounted() {
+     AOS.init({
+      duration: 800,
+      easing: 'slide',
+      once: true
+     });
 
+    jQuery(document).ready(function($) {
+
+      "use strict";
+
+    
+
+      var siteMenuClone = function() {
+
+        $('.js-clone-nav').each(function() {
+          var $this = $(this);
+          $this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
+        });
+
+
+        setTimeout(function() {
+
+          var counter = 0;
+          $('.site-mobile-menu .has-children').each(function(){
+            var $this = $(this);
+
+            $this.prepend('<span class="arrow-collapse collapsed">');
+
+            $this.find('.arrow-collapse').attr({
+              'data-toggle' : 'collapse',
+              'data-target' : '#collapseItem' + counter,
+            });
+
+            $this.find('> ul').attr({
+              'class' : 'collapse',
+              'id' : 'collapseItem' + counter,
+            });
+
+            counter++;
+
+          });
+
+        }, 1000);
+
+        $('body').on('click', '.arrow-collapse', function(e) {
+          var $this = $(this);
+          if ( $this.closest('li').find('.collapse').hasClass('show') ) {
+            $this.removeClass('active');
+          } else {
+            $this.addClass('active');
+          }
+          e.preventDefault();
+
+        });
+
+        $(window).resize(function() {
+          var $this = $(this),
+            w = $this.width();
+
+          if ( w > 768 ) {
+            if ( $('body').hasClass('offcanvas-menu') ) {
+              $('body').removeClass('offcanvas-menu');
+            }
+          }
+        })
+
+        $('body').on('click', '.js-menu-toggle', function(e) {
+          var $this = $(this);
+          e.preventDefault();
+
+          if ( $('body').hasClass('offcanvas-menu') ) {
+            $('body').removeClass('offcanvas-menu');
+            $this.removeClass('active');
+          } else {
+            $('body').addClass('offcanvas-menu');
+            $this.addClass('active');
+          }
+        })
+
+        // click outisde offcanvas
+        $(document).mouseup(function(e) {
+          var container = $(".site-mobile-menu");
+          if (!container.is(e.target) && container.has(e.target).length === 0) {
+            if ( $('body').hasClass('offcanvas-menu') ) {
+              $('body').removeClass('offcanvas-menu');
+            }
+          }
+        });
+      };
+      siteMenuClone();
+
+
+      var sitePlusMinus = function() {
+        $('.js-btn-minus').on('click', function(e){
+          e.preventDefault();
+          if ( $(this).closest('.input-group').find('.form-control').val() != 0  ) {
+            $(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) - 1);
+          } else {
+            $(this).closest('.input-group').find('.form-control').val(parseInt(0));
+          }
+        });
+        $('.js-btn-plus').on('click', function(e){
+          e.preventDefault();
+          $(this).closest('.input-group').find('.form-control').val(parseInt($(this).closest('.input-group').find('.form-control').val()) + 1);
+        });
+      };
+      // sitePlusMinus();
+
+
+      var siteSliderRange = function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+          }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+          " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+      };
+      // siteSliderRange();
+
+
+      var siteMagnificPopup = function() {
+        $('.image-popup').magnificPopup({
+          type: 'image',
+          closeOnContentClick: true,
+          closeBtnInside: false,
+          fixedContentPos: true,
+          mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+           gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+          },
+          image: {
+            verticalFit: true
+          },
+          zoom: {
+            enabled: true,
+            duration: 300 // don't foget to change the duration also in CSS
+          }
+        });
+
+        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+          disableOn: 700,
+          type: 'iframe',
+          mainClass: 'mfp-fade',
+          removalDelay: 160,
+          preloader: false,
+
+          fixedContentPos: false
+        });
+      };
+      siteMagnificPopup();
+
+
+      var siteCarousel = function () {
+        if ( $('.nonloop-block-13').length > 0 ) {
+          $('.nonloop-block-13').owlCarousel({
+            center: false,
+            items: 1,
+            loop: false,
+            stagePadding: 0,
+            margin: 20,
+            nav: true,
+            navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+            responsive:{
+              600:{
+                margin: 0,
+                stagePadding: 10,
+                items: 2
+              },
+              1000:{
+                margin: 0,
+                stagePadding: 0,
+                items: 2
+              },
+              1200:{
+                margin: 0,
+                stagePadding: 0,
+                items: 3
+              }
+            }
+          });
+        }
+
+        $('.nonloop-block-13').owlCarousel({
+          center: false,
+          items: 1,
+          loop: true,
+          autoplay: true,
+          stagePadding: 0,
+          margin: 20,
+          nav: true,
+          navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
+          responsive:{
+            600:{
+              margin: 0,
+              stagePadding: 0,
+              items: 2
+            },
+            1000:{
+              margin: 0,
+              stagePadding: 0,
+              items: 2
+            },
+            1200:{
+              margin: 0,
+              stagePadding: 0,
+              items: 3
+            }
+          }
+        });
+
+        if ( $('.slide-one-item').length > 0 ) {
+          $('.slide-one-item').owlCarousel({
+            center: false,
+            items: 1,
+            loop: true,
+            stagePadding: 0,
+            margin: 0,
+            autoplay: true,
+            pauseOnHover: false,
+            nav: true,
+            navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">']
+          });
+        }
+      };
+      siteCarousel();
+
+      var siteStellar = function() {
+        $(window).stellar({
+          responsive: false,
+          parallaxBackgrounds: true,
+          parallaxElements: true,
+          horizontalScrolling: false,
+          hideDistantElements: false,
+          scrollProperty: 'scroll'
+        });
+      };
+      siteStellar();
+
+      var siteCountDown = function() {
+
+        if ( $('#date-countdown').length > 0 ) {
+          $('#date-countdown').countdown('2020/10/10', function(event) {
+            var $this = $(this).html(event.strftime(''
+              + '<span class="countdown-block"><span class="label">%w</span> weeks </span>'
+              + '<span class="countdown-block"><span class="label">%d</span> days </span>'
+              + '<span class="countdown-block"><span class="label">%H</span> hr </span>'
+              + '<span class="countdown-block"><span class="label">%M</span> min </span>'
+              + '<span class="countdown-block"><span class="label">%S</span> sec</span>'));
+          });
+        }
+
+      };
+      siteCountDown();
+
+      var siteDatePicker = function() {
+
+        if ( $('.datepicker').length > 0 ) {
+          $('.datepicker').datepicker();
+        }
+
+      };
+      siteDatePicker();
+
+    });
+  },
 }
 
 </script>

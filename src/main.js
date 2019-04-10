@@ -30,8 +30,8 @@ export default function (Vue, { router, head, isClient }) {
   head.script.push({ src: '/assets/js/jquery.countdown.min.js' })
   head.script.push({ src: '/assets/js/jquery.magnific-popup.min.js' })
   head.script.push({ src: '/assets/js/jquery.stellar.min.js' })
-  head.script.push({ src: '/assets/js/main.js' })
+  //head.script.push({ src: '/assets/js/main.js' })
   head.script.push({ src: '/assets/js/popper.min.js' })
   head.script.push({ src: '/assets/js/slick.min.js' })
-  
+
 }
