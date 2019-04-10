@@ -145,7 +145,7 @@
    </div>
    <div class="nonloop-block-13 owl-carousel owl-loaded owl-drag">
       <div class="owl-stage-outer">
-         <carousel>
+         <!--<carousel>
             <div class="owl-item active" style="width: 380px;">
                <div class="testimony">
                   <img src="../images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
@@ -170,7 +170,7 @@
                   <p>“<em>Attended the Inks, Resin, Crystals, Stones, and Glitter class and loved it. Stephanie is knowledgeable, very nice and super accommodating. Lots of materials to choose from and lots of time to create and learn! I have already signed up for another class.</em>”</p>
                </div>
             </div>
-            </carousel>
+            </carousel>-->
          </div>
       </div>
 
@@ -228,7 +228,7 @@ export default {
     title: 'Wilder than the Wind - Edmonton'
   },
   mounted() {
-     AOS.init({
+     /*AOS.init({
       duration: 800,
       easing: 'slide',
       once: true
@@ -238,7 +238,7 @@ export default {
 
       "use strict";
 
-    
+
 
       var siteMenuClone = function() {
 
@@ -498,7 +498,7 @@ export default {
       };
       siteDatePicker();
 
-    });
+    });*/
   },
 }
 

@@ -1,7 +1,7 @@
 <template>
-    <BlogLayout>
-        <div class="markdown-body" v-html="$page.post.content"/>
-    </BlogLayout>
+  <BlogLayout>
+    <div class="markdown-body" v-html="$page.post.content" />
+  </BlogLayout>
 </template>
 
 <page-query>
@@ -14,11 +14,11 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-export default   {
-    metaInfo()  {
-        return {
-            title: this.$page.post.title
-        }
-    }
-}
+export default {
+  metaInfo() {
+    return {
+      title: this.$page.post.title
+    };
+  }
+};
 </script>
