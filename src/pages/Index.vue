@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="hero-wrapper">
-      <video autoplay muted loop id="bg-video">
+      <video autoplay muted loop playsinline id="bg-video">
         <source src="/video/032715490-dandelion-blowing-slow-motion_H264_420-web-xl.mp4" type="video/mp4">
       </video>
       <!--<div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url(images/hero_white.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">-->
