@@ -205,46 +205,6 @@
         </div>
       </div>
     </div>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <span class="sub-title">Follow Us On Our Blog</span>
-            <h2 class="font-weight-bold text-black mb-5">Recent Posts</h2>
-          </div>
-        </div>
-        <div class="row mb-5">
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
-            <a href="#" class="d-block figure">
-              <img src="/images/girl_blue_paint.jpg" alt="Image" class="img-fluid">
-            </a>
-            <span class="text-muted d-block mb-2">23, January 2019</span>
-            <h3><a href="#">The importance of art in living a stress-free life.</a></h3>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
-            <a href="#" class="d-block figure">
-              <img src="/images/art_gallery.jpg" alt="Image" class="img-fluid">
-            </a>
-            <span class="text-muted d-block mb-2">23, January 2019</span>
-            <h3><a href="#">Love trumps hate – or how art helps us transcend the division of politics.</a></h3>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
-            <a href="#" class="d-block figure">
-              <img src="/images/inks_resin_crystal_glitter.jpg" alt="Image" class="img-fluid">
-            </a>
-            <span class="text-muted d-block mb-2">23, January 2019</span>
-            <h3><a href="#">3 tips for professionally molding beautiful trinkets from resin.</a></h3>
-          </div>
-
-        </div>
-        <div class="row mt-5 text-center">
-          <div class="col-12">
-            <p><a href="blog.html" class="btn btn-primary btn-lg rounded-0">View All Posts</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
   </Layout>
 </template>
 
