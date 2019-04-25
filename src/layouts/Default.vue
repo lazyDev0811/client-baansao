@@ -77,10 +77,11 @@
       </div>
     </div>
 
-    <slot />
+    <div class="page-wrap">
+      <slot />
 
-    <footer class="site-footer border-top">
-      <div class="container">
+      <footer class="site-footer border-top">
+      <div class="container mt-4 pt-4">
         <div class="row">
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="row mb-5">
@@ -128,6 +129,7 @@
         <div class="row pt-5 mt-5 text-center"></div>
       </div>
     </footer>
+    </div>
   </div>
 </template>
 
@@ -196,5 +198,23 @@ query {
 .site-blocks-cover .intro-text {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.site-footer {
+  position: absolute;
+  bottom: -39vh;
+  width: 100vw;
+
+}
+
+.page-wrap {
+  position: relative;
+  margin-bottom: -39vh;
+}
+
+.page-wrap::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>
