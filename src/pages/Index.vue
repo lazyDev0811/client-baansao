@@ -1,24 +1,21 @@
 <template>
   <Layout>
-
-
   <head>
     <title>Wilder than the Wind &mdash; Edmonton Art Studio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="assets/css/aos.css">
-
+    <!--<link rel="stylesheet" href="assets/css/aos.css">-->
   </head>
-
 
   <body>
     <video autoplay muted loop id="bg-video">
       <source src="/video/032715490-dandelion-blowing-slow-motion_H264_420-web-xl.mp4" type="video/mp4">
     </video>
-    <div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url(images/hero_white.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
+    <!--<div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url(images/hero_white.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">-->
+    <div class="site-blocks-cover overlay aos-init aos-animate" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row align-items-center text-center justify-content-center">
+        <div class="row align-items-center text-center justify-content-center" style="position: relative; top: -3rem;">
           <div class="col-md-8">
             <h1>Wilder than the Wind</h1>
             <span class="sub-text">creation.inspiration.education.elevation.</span>
@@ -531,6 +528,7 @@ export default {
   top: 0;
   left: 0;
   z-index: 0;
+  object-fit: cover;
 }
 
 </style>
