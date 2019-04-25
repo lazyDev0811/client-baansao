@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <div class="hero-wrap">
+    <div class="hero-wrapper">
       <video autoplay muted loop id="bg-video">
         <source src="/video/032715490-dandelion-blowing-slow-motion_H264_420-web-xl.mp4" type="video/mp4">
       </video>
@@ -65,7 +65,10 @@
         </div>
       </div>
     </div>
-  </body>
+
+
+    </body>
+
   </Layout>
 </template>
 
@@ -369,7 +372,7 @@ export default {
 }
 
 /* Good stuff here, pros on it */
-.hero-wrap {
+.hero-wrapper {
   height: 100vh;
   overflow: hidden;
 }
