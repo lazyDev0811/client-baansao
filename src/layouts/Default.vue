@@ -235,4 +235,48 @@ query {
   clear: both;
   display: table;
 }
+
+  /* Good stuff here, pros on it */
+.hero-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  object-fit: cover;
+}
+
+/* Adjust section z-index to accommodate for video index */
+.site-section {
+  position: relative;
+  z-index: 1;
+}
+
+.dark {
+  background: black;
+}
+
+/*.site-section > .container {
+  background: white;
+}*/
+
+/* Dark style */
+.layout.dark .text-black {
+  color: #fff !important;
+}
+
+.layout.dark h3 {
+  color: white;
+}
+
+.layout.dark a {
+  color: white;
+}
+
 </style>

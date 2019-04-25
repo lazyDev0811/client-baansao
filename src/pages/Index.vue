@@ -275,26 +275,4 @@ export default {
     -webkit-tap-highlight-color: transparent;
     position: relative;
 }
-
-/* Good stuff here, pros on it */
-.hero-wrapper {
-  height: 100vh;
-  overflow: hidden;
-}
-
-#bg-video {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  object-fit: cover;
-}
-
-/* Adjust section z-index to accommodate for video index */
-.site-section {
-  position: relative;
-  z-index: 1;
-}
 </style>
