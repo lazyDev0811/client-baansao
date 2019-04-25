@@ -66,7 +66,7 @@
                     <li><g-link to="/">Home</g-link></li>
                     <li><g-link to="/about">About Us</g-link></li>
                     <li><g-link to="/classes">Classes</g-link></li>
-                    <li><g-link to="/blog">Blog</g-link></li>
+                    <!--<li><g-link to="/blog">Blog</g-link></li>-->
                     <li><g-link to="/contact">Contact Us</g-link></li>
                   </ul>
                 </div>
@@ -92,7 +92,7 @@
                   <ul class="list-unstyled">
                     <li><g-link to="/">Home</g-link></li>
                     <li><g-link to="/classes">Classes</g-link></li>
-                    <li><g-link to="/blog">Blog</g-link></li>
+                    <!--<li><g-link to="/blog">Blog</g-link></li>-->
                   </ul>
                 </div>
                 <div class="col-md-6 col-lg-6">
