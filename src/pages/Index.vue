@@ -71,7 +71,7 @@
         <div class="row">
           <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="img-border">
-              <img src="../images/oceanbeach.jpg" alt="Ocean Beach Art" class="img-fluid">
+              <img src="/images/oceanbeach.jpg" alt="Ocean Beach Art" class="img-fluid">
             </div>
           </div>
           <div class="col-lg-5 ml-auto">
@@ -147,7 +147,7 @@
          <!--<carousel>
             <div class="owl-item active" style="width: 380px;">
                <div class="testimony">
-                  <img src="../images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
+                  <img src="/images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
                   <h3>Reannin Sirianni</h3>
                   <span class="sub-title"></span>
                   <p>“<em>I recently took an art class here. It was ridiculously amazing. I had so much fun! I felt like a little kid creating my artwork. Stephanie is such an awesome teacher she teaches you many practical techniques but also gives you plenty of time to play around make a mess and encourages you to have fun. Stephanie’s energy is fabulous. I highly recommend taking a class here to everyone and anyone. I loved it!! I will definitely be back!</em>”</p>
@@ -155,7 +155,7 @@
             </div>
             <div class="owl-item active" style="width: 380px;">
                <div class="testimony">
-                  <img src="../images/nellie_thompson.jpg" alt="Image" class="img-fluid">
+                  <img src="/images/nellie_thompson.jpg" alt="Image" class="img-fluid">
                   <h3>Nellie Thompson</h3>
                   <span class="sub-title"></span>
                   <p>“<em>I met Stephanie at a market and loved her creations. Took the flowers and landscape class. Loved it and can’t wait to take more.</em>”</p>
@@ -163,7 +163,7 @@
             </div>
             <div class="owl-item active" style="width: 380px;">
                <div class="testimony">
-                  <img src="../images/julie_d_king.jpg" alt="Image" class="img-fluid">
+                  <img src="/images/julie_d_king.jpg" alt="Image" class="img-fluid">
                   <h3>Julie D. King</h3>
                   <span class="sub-title"></span>
                   <p>“<em>Attended the Inks, Resin, Crystals, Stones, and Glitter class and loved it. Stephanie is knowledgeable, very nice and super accommodating. Lots of materials to choose from and lots of time to create and learn! I have already signed up for another class.</em>”</p>
@@ -188,21 +188,21 @@
         <div class="row mb-5">
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
             <a href="#" class="d-block figure">
-              <img src="../images/girl_blue_paint.jpg" alt="Image" class="img-fluid">
+              <img src="/images/girl_blue_paint.jpg" alt="Image" class="img-fluid">
             </a>
             <span class="text-muted d-block mb-2">23, January 2019</span>
             <h3><a href="#">The importance of art in living a stress-free life.</a></h3>
           </div>
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
             <a href="#" class="d-block figure">
-              <img src="../images/art_gallery.jpg" alt="Image" class="img-fluid">
+              <img src="/images/art_gallery.jpg" alt="Image" class="img-fluid">
             </a>
             <span class="text-muted d-block mb-2">23, January 2019</span>
             <h3><a href="#">Love trumps hate – or how art helps us transcend the division of politics.</a></h3>
           </div>
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
             <a href="#" class="d-block figure">
-              <img src="../images/inks_resin_crystal_glitter.jpg" alt="Image" class="img-fluid">
+              <img src="/images/inks_resin_crystal_glitter.jpg" alt="Image" class="img-fluid">
             </a>
             <span class="text-muted d-block mb-2">23, January 2019</span>
             <h3><a href="#">3 tips for professionally molding beautiful trinkets from resin.</a></h3>

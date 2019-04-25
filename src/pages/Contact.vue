@@ -2,7 +2,7 @@
   <Layout>
     <div
       class="site-blocks-cover overlay inner-page"
-      style="background-image: url(../images/oceanbeach2.jpg)"
+      style="background-image: url(/images/oceanbeach2.jpg)"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >

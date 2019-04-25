@@ -2,7 +2,7 @@
   <Layout>
     <div
       class="site-blocks-cover overlay inner-page"
-      style="background-image: url(../images/colorful_girl.jpg);"
+      style="background-image: url(/images/colorful_girl.jpg);"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
@@ -22,7 +22,7 @@
           <div class="col-lg-4 col-md-6 mb-4 project-entry">
             <a href="#" class="d-block figure">
               <img
-                src="../images/inks_resin_crystal_glitter.jpg"
+                src="/images/inks_resin_crystal_glitter.jpg"
                 alt="Image"
                 class="img-fluid"
               />
@@ -57,7 +57,7 @@
           <div class="col-lg-4 col-md-6 mb-4 project-entry">
             <a href="#" class="d-block figure">
               <img
-                src="../images/oceanbeach.jpg"
+                src="/images/oceanbeach.jpg"
                 alt="Image"
                 class="img-fluid"
               />
@@ -85,7 +85,7 @@
           <div class="col-lg-4 col-md-6 mb-4 project-entry">
             <a href="#" class="d-block figure">
               <img
-                src="../images/edgy_abstract.jpg"
+                src="/images/edgy_abstract.jpg"
                 alt="Image"
                 class="img-fluid"
               />

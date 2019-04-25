@@ -2,7 +2,7 @@
   <Layout>
     <div
       class="site-blocks-cover overlay inner-page"
-      style="background-image: url(../images/trees.jpg);"
+      style="background-image: url(/images/trees.jpg);"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
@@ -20,7 +20,7 @@
         <div class="row align-items-center mb-5 pb-5">
           <div class="col-lg-7 img-years mb-5 mb-lg-0">
             <img
-              src="../images/stephanie_lane3.jpg"
+              src="/images/stephanie_lane3.jpg"
               alt="Image"
               class="img-fluid"
             />
@@ -53,7 +53,7 @@
     <div class="site-half">
       <div
         class="img-bg-1"
-        style="background-image: url('../images/art_display_office.jpg');"
+        style="background-image: url('/images/art_display_office.jpg');"
       ></div>
       <div class="container">
         <div class="row no-gutters align-items-stretch">
