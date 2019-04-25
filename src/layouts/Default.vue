@@ -200,12 +200,30 @@ query {
   line-height: 1.5;
 }
 
-.site-footer {
-  position: absolute;
-  bottom: -39vh;
-  width: 100vw;
+@media screen and (max-width: 768px) {
+  .site-footer {
+    padding: 0;
+  }
 
+  /* Quick fixes for typography */
+  .site-blocks-cover .sub-text {
+    font-size: 0.65rem !important;
+    white-space: normal;
+  }
+
+  .site-blocks-cover h1 {
+    font-size: 2.5rem !important;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .site-footer {
+    position: absolute;
+    bottom: -39vh;
+    width: 100vw;
+  }
+}
+
 
 .page-wrap {
   position: relative;
