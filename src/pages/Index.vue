@@ -13,7 +13,9 @@
 
 
   <body>
-
+    <video autoplay muted loop id="bg-video">
+      <source src="/video/032715490-dandelion-blowing-slow-motion_H264_420-web-xl.mp4" type="video/mp4">
+    </video>
     <div class="site-blocks-cover overlay aos-init aos-animate" style="background-image: url(images/hero_white.jpg)" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center text-center justify-content-center">
@@ -519,6 +521,16 @@ export default {
 .owl-carousel, .owl-carousel .owl-item {
     -webkit-tap-highlight-color: transparent;
     position: relative;
+}
+
+/* Good stuff here, pros on it */
+#bg-video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 </style>
