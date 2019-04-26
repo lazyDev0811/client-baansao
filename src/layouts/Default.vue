@@ -91,21 +91,21 @@
           <div class="row mb-5">
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
               <a href="#" class="d-block figure">
-                <img src="/images/girl_blue_paint.jpg" alt="Image" class="img-fluid">
+                <img src="/images/girl_blue_paint.jpg" alt="Image" class="img-fluid brush-01">
               </a>
               <span class="text-muted d-block mb-2">23, January 2019</span>
               <h3><a href="#">The importance of art in living a stress-free life.</a></h3>
             </div>
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
               <a href="#" class="d-block figure">
-                <img src="/images/art_gallery.jpg" alt="Image" class="img-fluid">
+                <img src="/images/art_gallery.jpg" alt="Image" class="img-fluid brush-02">
               </a>
               <span class="text-muted d-block mb-2">23, January 2019</span>
               <h3><a href="#">Love trumps hate – or how art helps us transcend the division of politics.</a></h3>
             </div>
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry">
               <a href="#" class="d-block figure">
-                <img src="/images/inks_resin_crystal_glitter.jpg" alt="Image" class="img-fluid">
+                <img src="/images/inks_resin_crystal_glitter.jpg" alt="Image" class="img-fluid brush-03">
               </a>
               <span class="text-muted d-block mb-2">23, January 2019</span>
               <h3><a href="#">3 tips for professionally molding beautiful trinkets from resin.</a></h3>
@@ -319,4 +319,38 @@ query {
   color: white;
 }
 
+.hero-mask {
+  mask: url('/images/hero-mask.svg') no-repeat;
+  mask-size: cover;
+  mask-position: bottom center;
+}
+
+.splash {
+  mask: url('/images/watercolor-splash.svg') no-repeat;
+  transform: rotate(5deg) scale(1.05) !important;
+}
+
+.brush-01 {
+  mask: url('/images/brush-orange.svg') no-repeat;
+  mask-size: contain;
+}
+
+.brush-02 {
+  mask: url('/images/brush-blue.svg') no-repeat;
+  mask-size: contain;
+}
+
+.brush-03 {
+  mask: url('/images/brush-pink.svg') no-repeat;
+  mask-size: contain;
+}
+
+.brush-04 {
+  mask: url('/images/brush-yellow.svg') no-repeat;
+  mask-size: contain;
+}
+
+.page-wrap {
+
+}
 </style>

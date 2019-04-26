@@ -22,7 +22,7 @@
             <img
               src="/images/stephanie_lane3.jpg"
               alt="Image"
-              class="img-fluid"
+              class="img-fluid brush-01"
             />
           </div>
           <div class="col-lg-4 ml-auto">
@@ -52,7 +52,7 @@
 
     <div class="site-half">
       <div
-        class="img-bg-1"
+        class="img-bg-1 brush-02"
         style="background-image: url('/images/art_display_office.jpg');"
       ></div>
       <div class="container">

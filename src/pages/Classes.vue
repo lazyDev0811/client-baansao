@@ -24,7 +24,7 @@
               <img
                 src="/images/inks_resin_crystal_glitter.jpg"
                 alt="Image"
-                class="img-fluid"
+                class="img-fluid brush-01"
               />
             </a>
             <h3 class="mb-0">
@@ -59,7 +59,7 @@
               <img
                 src="/images/oceanbeach.jpg"
                 alt="Image"
-                class="img-fluid"
+                class="img-fluid brush-02"
               />
             </a>
             <h3 class="mb-0"><a href="#">Ocean in Resin Painting</a></h3>
@@ -87,7 +87,7 @@
               <img
                 src="/images/edgy_abstract.jpg"
                 alt="Image"
-                class="img-fluid"
+                class="img-fluid brush-03"
               />
             </a>
             <h3 class="mb-0"><a href="#">Edgy Abstracts Art Escape</a></h3>
