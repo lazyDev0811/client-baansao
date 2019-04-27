@@ -80,7 +80,7 @@
     <div class="page-wrap">
       <slot />
 
-      <div class="site-section">
+      <div class="site-section pt-0">
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">

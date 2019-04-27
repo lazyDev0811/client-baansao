@@ -137,7 +137,7 @@
       </div>
     </div>
 
-    <div class="site-section">
+    <!--<div class="site-section">
       <div class="container pt-4">
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-6 mb-5 mb-lg-0">
@@ -146,9 +146,6 @@
             </div>
           </div>
           <div class="col-lg-5 ml-auto">
-            <!-- Leave this in here useful for modal display -->
-            <!--<span class="sub-title">What Types of Classes Do We Offer?</span>
-            <h2 class="font-weight-bold text-black mb-5">Popular Art Workshops:</h2>-->
             <div class="accordion" id="accordionExample">
 
               <h2 class="mb-0 border rounded mb-2">
@@ -204,7 +201,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </Layout>
 </template>
 
