@@ -10217,8 +10217,8 @@ h6 {
 }
 .site-blocks-cover.inner-page,
 .site-blocks-cover.inner-page .row {
-  min-height: 600px;
-  height: calc(80vh);
+  min-height: 800px;
+  height: calc(100vh);
 }
 .site-blocks-cover .sub-text {
   font-size: 1.1rem;

@@ -206,8 +206,8 @@ query {
 }
 .site-blocks-cover.inner-page,
 .site-blocks-cover.inner-page .row {
-  min-height: 600px;
-  height: calc(80vh);
+  min-height: 800px;
+  height: calc(100vh);
 }
 .site-blocks-cover .sub-text {
   font-size: 1.1rem;
@@ -320,6 +320,7 @@ query {
 }
 
 .hero-mask {
+  width: 100%;
   mask: url('/images/hero-mask.svg') no-repeat;
   mask-size: cover;
   mask-position: bottom center;
