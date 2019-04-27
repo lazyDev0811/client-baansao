@@ -9812,7 +9812,7 @@ h6 {
   left: 0;
 }
 .site-navbar-wrap a {
-  color: #fff;
+  color: black;
 }
 .site-navbar-wrap .site-navbar-top {
   font-size: 0.8rem;
@@ -9851,12 +9851,12 @@ h6 {
 }
 .site-navbar .site-navigation .site-menu > li > a {
   padding: 10px 10px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
   font-size: 15px;
   text-decoration: none !important;
 }
 .site-navbar .site-navigation .site-menu > li > a:hover {
-  color: #fff;
+  color: black;
 }
 .site-navbar .site-navigation .site-menu > li:last-child {
   padding-right: 0;
