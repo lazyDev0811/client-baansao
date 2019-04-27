@@ -120,7 +120,7 @@
         </div>
       </div>
 
-      <footer class="site-footer border-top">
+      <footer class="site-footer">
         <div class="container mt-4 pt-4">
           <div class="row">
             <div class="col-lg-4 mb-5 mb-lg-0">

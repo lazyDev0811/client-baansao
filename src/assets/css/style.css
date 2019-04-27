@@ -9726,7 +9726,8 @@ h6 {
 
 .site-footer {
   padding: 4em 0 0 0;
-  background: #333333;
+  background: url(/images/footer-top.svg) #000 no-repeat;
+  background-position: 50% -2.5em;
 }
 .site-footer p {
   color: #737373;
