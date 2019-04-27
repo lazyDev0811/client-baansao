@@ -27,7 +27,7 @@
               </div>
               <div class="text">
                 <h2 class="font-weight-bold text-black">Art Workshops</h2>
-                <p>Check out our current classes on offer</p>
+                <p>Check out our current classes and offerings.</p>
               </div>
             </a>
           </div>
