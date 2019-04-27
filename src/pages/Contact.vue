@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div
-      class="site-blocks-cover overlay inner-page"
+      class="site-blocks-cover overlay inner-page hero-mask"
       style="background-image: url(/images/colorful_girl.jpg);"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
