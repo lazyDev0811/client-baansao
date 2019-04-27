@@ -10294,7 +10294,7 @@ h6 {
 }
 
 .site-block-feature {
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
   position: relative;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
@@ -10306,20 +10306,19 @@ h6 {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  color: #fff;
 }
 .site-block-feature h3 {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
   font-size: 15px;
-  color: #98ccd3;
+  color: black;
 }
 .site-block-feature p {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.4);
   font-size: 1rem;
 }
 .site-block-feature p:last-child {

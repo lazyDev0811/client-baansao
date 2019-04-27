@@ -17,16 +17,16 @@
       </div>
     </div>
 
-    <div class="site-section">
+    <div class="site-section pb-0">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
             <a href="/classes" class="site-block-feature d-flex p-4 rounded mb-4">
               <div class="mr-3">
-                <i class="material-icons" style="font-size:40px;color:white;">brush</i>
+                <i class="material-icons block-icon">brush</i>
               </div>
               <div class="text">
-                <h3>Art Workshops</h3>
+                <h2 class="font-weight-bold text-black">Art Workshops</h2>
                 <p>Check out our current classes on offer</p>
               </div>
             </a>
@@ -34,10 +34,10 @@
           <div class="col-lg-4">
             <a href="#" class="site-block-feature d-flex p-4 rounded mb-4">
               <div class="mr-3">
-                <i class="material-icons" style="font-size:40px;color:white;">calendar_today</i>
+                <i class="material-icons block-icon">calendar_today</i>
               </div>
               <div class="text">
-                <h3>Events Calendar</h3>
+                <h2 class="font-weight-bold text-black">Events Calendar</h2>
                 <p>Explore our events page to find a class that will fit your schedule.</p>
               </div>
             </a>
@@ -45,10 +45,10 @@
           <div class="col-lg-4">
             <a href="#" class="site-block-feature d-flex p-4 rounded mb-4">
               <div class="mr-3">
-                <i class="material-icons" style="font-size:40px;color:white;">local_grocery_store</i>
+                <i class="material-icons block-icon">local_grocery_store</i>
               </div>
               <div class="text">
-                <h3>Art for Sale</h3>
+                <h2 class="font-weight-bold text-black">Art for Sale</h2>
                 <p>Coming soon!</p>
               </div>
             </a>
@@ -57,7 +57,7 @@
       </div>
     </div>
 
-    <div class="site-section">
+    <div class="site-section pt-0">
       <div class="container pt-4">
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-11 ml-auto">
@@ -233,5 +233,10 @@ export default {
 .owl-carousel, .owl-carousel .owl-item {
     -webkit-tap-highlight-color: transparent;
     position: relative;
+}
+
+.block-icon {
+  font-size: 32px !important;
+  color: black;
 }
 </style>
