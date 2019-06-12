@@ -60,7 +60,9 @@ export default {
       return (typeof this.className === 'string' && this.className.length > 0) ? this.className : '';
     },
     compiledDescription() {
-      return marked(this.description);
+      // TODO: Either marked has an issue, or it can ONLY deal with markdown; this is blowing up in prod...
+      return this.description;
+      // return marked(this.description);
     }
   },
   methods: {

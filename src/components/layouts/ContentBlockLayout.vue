@@ -7,20 +7,87 @@
         class="img-fluid brush-01"
       />
     </a>
-    <p v-if="typeof this.datePublished === 'string' && this.datePublished.length > 0" class="text-muted">{{ this.datePublished }}</p>
+    <p class="text-muted">{{ this.datePublished }}</p>
     <h3 class="mb-0">
       <a href="#">{{ this.title }}</a>
     </h3>
     <br />
     <p class="text-muted" v-html="compiledDescription"></p>
-    <p v-if="typeof this.linkText === 'string' && this.linkText.length > 0">
+    <p>
       <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText" class="btn btn-art-class btn-lg rounded-0"><i class="material-icons block-icon">brush</i> {{ this.linkText }}</a>
     </p>
   </div>
 </template>
 
 <script>
-import ContentBlock from './ContentBlock';
-
-export default ContentBlock;
+export default {
+  // TODO: Supply models via props??
+  props: {
+    className: {
+      type: String,
+      default: null
+    },
+    flipLayout: {
+      type: Boolean,
+      default: false,
+    },
+    title: {
+      type: String,
+      default: '',
+    },
+    subtitle: {
+      type: String,
+      default: '',
+    },
+    description: {
+      type: String,
+      default: '',
+    },
+    image: {
+      type: String,
+      default: '',
+    },
+    link: {
+      type: String,
+      default: '',
+    },
+    linkText: {
+      type: String,
+      default: '',
+    },
+    onLinkClicked: {
+      type: Function,
+      default: null,
+    },
+    caption: {
+      type: String,
+      default: '',
+    },
+    subCaption: {
+      type: String,
+      default: '',
+    },
+    datePublished: {
+      type: String,
+      default: '',
+    },
+  },
+  computed: {
+    classNameString() {
+      return (typeof this.className === 'string' && this.className.length > 0) ? this.className : '';
+    },
+    compiledDescription() {
+      // TODO: Either marked has an issue, or it can ONLY deal with markdown; this is blowing up in prod...
+      return this.description;
+      // return marked(this.description);
+    }
+  },
+  methods: {
+    linkClicked() {
+      if (typeof this.onLinkClicked === 'function') {
+        this.onLinkClicked();
+      }
+    }
+  }
+};
 </script>

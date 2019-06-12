@@ -303,10 +303,11 @@
         this.hideBookingForm();
         this.hideQuestionForm();
 
-        window.setTimeout(() => {
-          this.$refs.classDetails.scrollIntoView();
-        }, 333);
-
+        if (typeof window !== 'undefined') {
+          window.setTimeout(() => {
+            this.$refs.classDetails.scrollIntoView();
+          }, 333);
+        }
       },
       unsetActiveClass() {
         this.activeClass = null;
@@ -319,9 +320,12 @@
       },
       showQuestionForm() {
         this.displayQuestionForm = true;
-        window.setTimeout(() => {
-          this.$refs.questionForm.scrollIntoView();
-        }, 333);
+
+        if (typeof window !== 'undefined') {
+          window.setTimeout(() => {
+            this.$refs.questionForm.scrollIntoView();
+          }, 333);
+        }
       },
       hideQuestionForm() {
         this.displayQuestionForm = null;
