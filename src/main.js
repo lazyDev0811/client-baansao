@@ -5,6 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue';
 
 import '~/assets/scss/style.scss';
 import '~/assets/css/style.css';
+import '~/assets/css/site.css';
 import '~/assets/fonts/icomoon/style.css';
 
 export default function (Vue, { router, head, isClient }) {

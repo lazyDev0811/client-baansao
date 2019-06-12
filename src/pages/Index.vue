@@ -20,6 +20,13 @@
     <div class="site-section pb-0">
       <div class="container">
         <div class="row">
+          <div class="col-lg-12">
+            <div class="content-block">
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-lg-4">
             <a href="/classes" class="site-block-feature d-flex p-4 rounded mb-4">
               <div class="mr-3">
@@ -68,68 +75,33 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4 project-entry">
-            <a href="#" class="d-block figure">
-              <img
-                src="/images/inks_resin_crystal_glitter.jpg"
-                alt="Image"
-                class="img-fluid brush-01"
-              />
-            </a>
-            <h3 class="mb-0">
-              <a href="#">Ink, Resin and Crystals Art Escape</a>
-            </h3>
-            <br />
-            <p class="text-muted">
-              Escape into the world of glassy resin, crystals and semi precious
-              stones.
-            </p>
-            <p>
-              <a href="/classes" class="btn btn-primary btn-lg rounded-0"
-                >Learn More</a
-              >
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 project-entry">
-            <a href="#" class="d-block figure">
-              <img
-                src="/images/oceanbeach.jpg"
-                alt="Image"
-                class="img-fluid brush-02"
-              />
-            </a>
-            <h3 class="mb-0"><a href="#">Ocean in Resin Painting</a></h3>
-            <br />
-            <p class="text-muted">
-              In this three hour art escape, we will paint a cross section of
-              the ocean.
-            </p>
-            <p>
-              <a href="/classes" class="btn btn-primary btn-lg rounded-0"
-                >Learn More</a
-              >
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 project-entry">
-            <a href="#" class="d-block figure">
-              <img
-                src="/images/edgy_abstract.jpg"
-                alt="Image"
-                class="img-fluid brush-03"
-              />
-            </a>
-            <h3 class="mb-0"><a href="#">Edgy Abstracts Art Escape</a></h3>
-            <br />
-            <p class="text-muted">
-              We will be “living on the edge” as we delve into a world of
-              industrial, graffiti type painting.
-            </p>
-            <p>
-              <a href="/classes" class="btn btn-primary btn-lg rounded-0"
-                >Learn More</a
-              >
-            </p>
-          </div>
+          <content-block-layout
+            className="col-lg-4 col-md-6 mb-4 project-entry"
+            title="Ink, Resin and Crystals Art Escape"
+            description="Escape into the world of glassy resin, crystals and semi precious stones."
+            link="/classes"
+            linkText="Learn More"
+            image="/images/inks_resin_crystal_glitter.jpg"
+            imageAlt=""
+          />
+          <content-block-layout
+            className="col-lg-4 col-md-6 mb-4 project-entry"
+            title="Ocean in Resin Painting"
+            description="In this three hour art escape, we will paint a cross section of the ocean."
+            link="/classes"
+            linkText="Learn More"
+            image="/images/oceanbeach.jpg"
+            imageAlt=""
+          />
+          <content-block-layout
+            className="col-lg-4 col-md-6 mb-4 project-entry"
+            title="Edgy Abstracts Art Escape"
+            description="We will be “living on the edge” as we delve into a world of industrial, graffiti type painting."
+            link="/classes"
+            linkText="Learn More"
+            image="/images/edgy_abstract.jpg"
+            imageAlt=""
+          />
         </div>
       </div>
     </div>
@@ -137,34 +109,16 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: 'Wilder than the Wind - Edmonton'
-  },
-  mounted() {
-  },
-}
+  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
+  export default {
+    components: {
+      ContentBlockLayout,
+    },
+    metaInfo: {
+      title: 'Wilder than the Wind - Edmonton'
+    },
+    mounted() {
+    },
+  }
 </script>
-
-<style>
-.owl-carousel.owl-loaded {
-    display: block;
-}
-
-.owl-carousel {
-    display: none;
-    width: 100%;
-    z-index: 1;
-}
-
-.owl-carousel, .owl-carousel .owl-item {
-    -webkit-tap-highlight-color: transparent;
-    position: relative;
-}
-
-.block-icon {
-  font-size: 32px !important;
-  color: black;
-}
-</style>

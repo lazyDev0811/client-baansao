@@ -19,102 +19,139 @@
     <div class="site-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4 project-entry">
-            <a href="#" class="d-block figure">
-              <img
-                src="/images/inks_resin_crystal_glitter.jpg"
-                alt="Image"
-                class="img-fluid brush-01"
-              />
-            </a>
-            <h3 class="mb-0">
-              <a href="#">Ink, Resin and Crystals Art Escape</a>
-            </h3>
-            <br />
-            <p class="text-muted">
-              Escape into the world of glassy resin, crystals and semi precious
-              stones such as Jasper, Turquoise, hematite, quartz, and more. In
-              this three hour art escape, we will learn how to create a vivid
-              abstract alcohol ink painting on a birch panel, with glitter, semi
-              precious stones and crystals adding to the effects. We will learn
-              how to use resin on paintings, however your piece will have to be
-              picked up the next day or later (12 hour cure time). Experience is
-              not necessary, and all materials plus many choices of crystals
-              will be provided, and a handout will be emailed to you so you can
-              replicate the techniques we practiced. $95 per person. Centrally
-              located in Edmonton! Please message this account to register for
-              the art escape.
-            </p>
-            <p>
-              <a
-                href="/contact"
-                class="btn btn-primary btn-lg rounded-0"
-                margin-top="20px"
-                >Book this Class</a
-              >
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 project-entry">
-            <a href="#" class="d-block figure">
-              <img
-                src="/images/oceanbeach.jpg"
-                alt="Image"
-                class="img-fluid brush-02"
-              />
-            </a>
-            <h3 class="mb-0"><a href="#">Ocean in Resin Painting</a></h3>
-            <br />
-            <p class="text-muted">
-              In this three hour art escape, we will paint a cross section of
-              the ocean. Your water will have dimension and colour, foam and
-              movement. We will also paint an art tile to have some reference to
-              alcohol inks. Depending on your choice, the painting will measure
-              12X16 and the serving board will be 9X12. Cost for the three hour
-              workshop is $85 for the cutting board and $95 for the ocean art..
-              Your piece will have to be picked up at a later date, as it takes
-              overnight to dry. These classes fill up quickly due to the small
-              class size required. Please message on facebook to sign up.
-              Centrally located in Edmonton!
-            </p>
-            <p>
-              <a href="/contact" class="btn btn-primary btn-lg rounded-0"
-                >Book this Class</a
-              >
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4 project-entry">
-            <a href="#" class="d-block figure">
-              <img
-                src="/images/edgy_abstract.jpg"
-                alt="Image"
-                class="img-fluid brush-03"
-              />
-            </a>
-            <h3 class="mb-0"><a href="#">Edgy Abstracts Art Escape</a></h3>
-            <br />
-            <p class="text-muted">
-              We will be “living on the edge” as we delve into a world of
-              industrial, graffiti type painting. This is an exciting class
-              where you get to immerse yourself into creative places you haven’t
-              explored before. We will use various fluid mediums to create some
-              really cool paintings that will not only be rebellious but will be
-              exciting and beautiful to look at. You will paint at least 1
-              painting on 10X12 yupo paper. $85 per person, no experience
-              necessary – this is one three hour class. Please message me to
-              enquire about taking this course! Other dates are available on my
-              events tab on Facebook. Centrally located in Edmonton!
-            </p>
-            <p>
-              <a href="/contact" class="btn btn-primary btn-lg rounded-0"
-                >Book this Class</a
-              >
-            </p>
-          </div>
+          <content-block-layout
+            className="col-lg-4 col-md-6 mb-4 project-entry"
+            title="Ink, Resin and Crystals Art Escape"
+            description="Escape into the world of glassy resin, crystals and semi precious stones."
+            link="/classes"
+            linkText="More Details"
+            image="/images/inks_resin_crystal_glitter.jpg"
+            imageAlt=""
+          />
+          <content-block-layout
+            className="col-lg-4 col-md-6 mb-4 project-entry"
+            title="Ocean in Resin Painting"
+            description="In this three hour art escape, we will paint a cross section of the ocean."
+            link="/classes"
+            linkText="More Details"
+            image="/images/oceanbeach.jpg"
+            imageAlt=""
+          />
+          <content-block-layout
+            className="col-lg-4 col-md-6 mb-4 project-entry"
+            title="Edgy Abstracts Art Escape"
+            description="We will be “living on the edge” as we delve into a world of industrial, graffiti type painting."
+            link="/classes"
+            linkText="More Details"
+            image="/images/edgy_abstract.jpg"
+            imageAlt=""
+          />
         </div>
       </div>
     </div>
 
+    <!--
+    <div class="col-lg-4 col-md-6 mb-4 project-entry">
+      <a href="#" class="d-block figure">
+        <img
+          src="/images/inks_resin_crystal_glitter.jpg"
+          alt="Image"
+          class="img-fluid brush-01"
+        />
+      </a>
+      <h3 class="mb-0">
+        <a href="#">Ink, Resin and Crystals Art Escape</a>
+      </h3>
+      <br />
+      <p class="text-muted">
+        Escape into the world of glassy resin, crystals and semi precious
+        stones such as Jasper, Turquoise, hematite, quartz, and more. In
+        this three hour art escape, we will learn how to create a vivid
+        abstract alcohol ink painting on a birch panel, with glitter, semi
+        precious stones and crystals adding to the effects. We will learn
+        how to use resin on paintings, however your piece will have to be
+        picked up the next day or later (12 hour cure time). Experience is
+        not necessary, and all materials plus many choices of crystals
+        will be provided, and a handout will be emailed to you so you can
+        replicate the techniques we practiced. $95 per person. Centrally
+        located in Edmonton! Please message this account to register for
+        the art escape.
+      </p>
+      <p>
+        <a
+          href="/contact"
+          class="btn btn-primary btn-lg rounded-0"
+          margin-top="20px"
+          >Book this Class</a
+        >
+      </p>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 project-entry">
+      <a href="#" class="d-block figure">
+        <img
+          src="/images/oceanbeach.jpg"
+          alt="Image"
+          class="img-fluid brush-02"
+        />
+      </a>
+      <h3 class="mb-0"><a href="#">Ocean in Resin Painting</a></h3>
+      <br />
+      <p class="text-muted">
+        In this three hour art escape, we will paint a cross section of
+        the ocean. Your water will have dimension and colour, foam and
+        movement. We will also paint an art tile to have some reference to
+        alcohol inks. Depending on your choice, the painting will measure
+        12X16 and the serving board will be 9X12. Cost for the three hour
+        workshop is $85 for the cutting board and $95 for the ocean art..
+        Your piece will have to be picked up at a later date, as it takes
+        overnight to dry. These classes fill up quickly due to the small
+        class size required. Please message on facebook to sign up.
+        Centrally located in Edmonton!
+      </p>
+      <p>
+        <a href="/contact" class="btn btn-primary btn-lg rounded-0"
+          >Book this Class</a
+        >
+      </p>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 project-entry">
+      <a href="#" class="d-block figure">
+        <img
+          src="/images/edgy_abstract.jpg"
+          alt="Image"
+          class="img-fluid brush-03"
+        />
+      </a>
+      <h3 class="mb-0"><a href="#">Edgy Abstracts Art Escape</a></h3>
+      <br />
+      <p class="text-muted">
+        We will be “living on the edge” as we delve into a world of
+        industrial, graffiti type painting. This is an exciting class
+        where you get to immerse yourself into creative places you haven’t
+        explored before. We will use various fluid mediums to create some
+        really cool paintings that will not only be rebellious but will be
+        exciting and beautiful to look at. You will paint at least 1
+        painting on 10X12 yupo paper. $85 per person, no experience
+        necessary – this is one three hour class. Please message me to
+        enquire about taking this course! Other dates are available on my
+        events tab on Facebook. Centrally located in Edmonton!
+      </p>
+      <p>
+        <a href="/contact" class="btn btn-primary btn-lg rounded-0"
+          >Book this Class</a
+        >
+      </p>
+    </div>-->
+
     <div class="site-section">
+      <div class="container pt-4">
+        <div class="row mt-4 mb-4 pt-4">
+          <div class="col-lg-11 ml-auto text-center">
+            <span class="sub-title">Escape into the world of glassy resin, crystals and stones</span>
+            <h2 class="font-weight-bold text-black mb-5">Ink, Resins, and Crystals Art Escape</h2>
+          </div>
+        </div>
+      </div>
       <div class="container pt-4">
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-6 mb-5 mb-lg-0">
@@ -123,58 +160,71 @@
             </div>
           </div>
           <div class="col-lg-5 ml-auto">
-            <div class="accordion" id="accordionExample">
-
-              <h2 class="mb-0 border rounded mb-2">
-                <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  1. Ink, Resins, and Crystals Art
-                </button>
-              </h2>
-
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>Escape into the world of <a href="https://www.facebook.com/events/1951925708450518/">glassy resin, crystals and semi precious stones</a> such as Jasper, Turquoise, hematite, quartz, and more. In this 3-hour art escape, we discover how to create a vivid abstract alcohol-ink painting on a birch panel – with glitter, semi precious stones and crystals adding to the effects. We will also learn how to use resin on paintings (requiring a 12-hour cure time, to be picked up a later time). No prior experience needed, and all materials (including your choice of many crystals will be provided), and a handout will be emailed to you so you can replicate the techniques we practiced.</p>
+            <p>Escape into the world of <a href="https://www.facebook.com/events/1951925708450518/">glassy resin, crystals and semi precious stones</a> such as Jasper, Turquoise, hematite, quartz, and more. In this 3-hour art escape, we discover how to create a vivid abstract alcohol-ink painting on a birch panel – with glitter, semi precious stones and crystals adding to the effects. We will also learn how to use resin on paintings (requiring a 12-hour cure time, to be picked up a later time). No prior experience needed, and all materials (including your choice of many crystals will be provided), and a handout will be emailed to you so you can replicate the techniques we practiced.</p>
+            <p class="mt-5">
+              <button class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i> Book this Class</button>&nbsp;
+              <button class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i> Ask a Question</button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container pt-4">
+        <div class="row mt-4 mb-4 pt-4">
+          <div class="col-md-12 col-lg-12">
+            <form
+              action="https://formspree.io/admin@firebrandwebsolutions.com"
+              method="POST"
+              class="p-5 bg-white"
+            >
+              <div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="fullname"
+                    class="form-control"
+                    placeholder="Full Name"
+                  />
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="font-weight-bold" for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Email Address"
+                  />
                 </div>
               </div>
 
-              <h2 class="mb-0 border rounded mb-2">
-                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  2. Edgy Abstracts Art
-                </button>
-              </h2>
-
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>We will be “living on the edge” as we delve into a world of <a href="https://www.facebook.com/events/2272133276332998/">industrial, graffiti type painting</a>. This is an exciting class where you get to immerse yourself into creative places you haven’t explored before. We will use various fluid mediums to create some really cool paintings that will not only be rebellious but will be exciting and beautiful to look at.</p>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="font-weight-bold" for="message">Message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Write your message here."
+                  ></textarea>
                 </div>
               </div>
 
-              <h2 class="mb-0 border rounded mb-2">
-                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  3. Birch Trees Art Escape
-                </button>
-              </h2>
-
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>In this art escape, we discover how to <a href="https://www.facebook.com/events/654900431606115/">paint a birch treeline</a> with a background on yupo paper mounted to a 9x12 birch panel. Time permitting, we also do some additional intuitive fluid painting on tiles as a bonus. You will receive lots of instruction, but will choose your own colours for the sky and leaves and any changes you desire.</p>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input
+                    type="submit"
+                    value="Send"
+                    class="btn btn-primary rounded-0 btn-lg"
+                  />
                 </div>
               </div>
-
-              <h2 class="mb-0 border rounded mb-2">
-                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  4. Ocean in Resin Art Escape
-                </button>
-              </h2>
-
-              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>In this three hour art escape, we will <a href="https://www.facebook.com/events/258024471751180/">paint a cross section of the ocean</a>. Your water will have dimension and colour, foam and movement. We will also paint an art tile to have some reference to alcohol inks.</p>
-                </div>
-              </div>
-
-            </div>
-
+            </form>
           </div>
         </div>
       </div>
@@ -222,9 +272,16 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: "Classes"
+  import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+
+  export default {
+    components: {
+      ContentBlockLayout,
+    },
+    metaInfo: {
+      title: "Classes"
+    },
+    mounted() {
+    },
   }
-};
 </script>
