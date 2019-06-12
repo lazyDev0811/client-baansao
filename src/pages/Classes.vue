@@ -10,7 +10,7 @@
         <div class="row align-items-center">
           <div class="col-md-10">
             <span class="sub-text"></span>
-            <h1>Our Classes</h1>
+            <h1>Classes, Courses, and Escapes</h1>
           </div>
         </div>
       </div>
@@ -25,6 +25,7 @@
             description="Escape into the world of glassy resin, crystals and semi precious stones."
             link="/classes"
             linkText="More Details"
+            :onLinkClicked="setActiveClass"
             image="/images/inks_resin_crystal_glitter.jpg"
             imageAlt=""
           />
@@ -34,6 +35,7 @@
             description="In this three hour art escape, we will paint a cross section of the ocean."
             link="/classes"
             linkText="More Details"
+            :onLinkClicked="setActiveClass"
             image="/images/oceanbeach.jpg"
             imageAlt=""
           />
@@ -43,6 +45,7 @@
             description="We will be “living on the edge” as we delve into a world of industrial, graffiti type painting."
             link="/classes"
             linkText="More Details"
+            :onLinkClicked="setActiveClass"
             image="/images/edgy_abstract.jpg"
             imageAlt=""
           />
@@ -143,16 +146,14 @@
       </p>
     </div>-->
 
-    <div class="site-section">
-      <div class="container pt-4">
+    <div class="site-section" v-if="activeClass">
+      <div class="container pt-4" ref="classDetails">
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-11 ml-auto text-center">
             <span class="sub-title">Escape into the world of glassy resin, crystals and stones</span>
             <h2 class="font-weight-bold text-black mb-5">Ink, Resins, and Crystals Art Escape</h2>
           </div>
         </div>
-      </div>
-      <div class="container pt-4">
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="img">
@@ -163,12 +164,19 @@
             <p>Escape into the world of <a href="https://www.facebook.com/events/1951925708450518/">glassy resin, crystals and semi precious stones</a> such as Jasper, Turquoise, hematite, quartz, and more. In this 3-hour art escape, we discover how to create a vivid abstract alcohol-ink painting on a birch panel – with glitter, semi precious stones and crystals adding to the effects. We will also learn how to use resin on paintings (requiring a 12-hour cure time, to be picked up a later time). No prior experience needed, and all materials (including your choice of many crystals will be provided), and a handout will be emailed to you so you can replicate the techniques we practiced.</p>
             <p class="mt-5">
               <button class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i> Book this Class</button>&nbsp;
-              <button class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i> Ask a Question</button>
+              <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i> Ask a Question</button>
             </p>
           </div>
         </div>
       </div>
-      <div class="container pt-4">
+
+      <div class="container pt-4" v-if="displayQuestionForm" ref="questionForm">
+        <div class="row">
+          <div class="col-12 text-center">
+            <span class="sub-title">Ink, Resins, and Crystals Art Escape</span>
+            <h2 class="font-weight-bold text-black mb-5">Have a Question? I'm Here to Help!</h2>
+          </div>
+        </div>
         <div class="row mt-4 mb-4 pt-4">
           <div class="col-md-12 col-lg-12">
             <form
@@ -179,7 +187,7 @@
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fullname"
-                    >Full Name</label
+                  >Full Name</label
                   >
                   <input
                     type="text"
@@ -228,45 +236,43 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="site-section block-13 testimonial-wrap">
-       <div class="row">
-          <div class="col-12 text-center">
-             <span class="sub-title">Happy Students</span>
-             <h2 class="font-weight-bold text-black mb-5">Testimonials</h2>
-          </div>
-       </div>
-       <div class="nonloop-block-13 owl-carousel owl-loaded owl-drag">
-          <div class="owl-stage-outer">
-             <!--<carousel>
-                <div class="owl-item active" style="width: 380px;">
-                   <div class="testimony">
-                      <img src="/images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
-                      <h3>Reannin Sirianni</h3>
-                      <span class="sub-title"></span>
-                      <p>“<em>I recently took an art class here. It was ridiculously amazing. I had so much fun! I felt like a little kid creating my artwork. Stephanie is such an awesome teacher she teaches you many practical techniques but also gives you plenty of time to play around make a mess and encourages you to have fun. Stephanie’s energy is fabulous. I highly recommend taking a class here to everyone and anyone. I loved it!! I will definitely be back!</em>”</p>
-                   </div>
-                </div>
-                <div class="owl-item active" style="width: 380px;">
-                   <div class="testimony">
-                      <img src="/images/nellie_thompson.jpg" alt="Image" class="img-fluid">
-                      <h3>Nellie Thompson</h3>
-                      <span class="sub-title"></span>
-                      <p>“<em>I met Stephanie at a market and loved her creations. Took the flowers and landscape class. Loved it and can’t wait to take more.</em>”</p>
-                   </div>
-                </div>
-                <div class="owl-item active" style="width: 380px;">
-                   <div class="testimony">
-                      <img src="/images/julie_d_king.jpg" alt="Image" class="img-fluid">
-                      <h3>Julie D. King</h3>
-                      <span class="sub-title"></span>
-                      <p>“<em>Attended the Inks, Resin, Crystals, Stones, and Glitter class and loved it. Stephanie is knowledgeable, very nice and super accommodating. Lots of materials to choose from and lots of time to create and learn! I have already signed up for another class.</em>”</p>
-                   </div>
-                </div>
-                </carousel>-->
-             </div>
-       </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <span class="sub-title">Testimonials from our</span>
+          <h2 class="font-weight-bold text-black mb-5">Happy Students</h2>
+        </div>
+      </div>
+      <div class="nonloop-block-13 owl-carousel owl-loaded owl-drag">
+        <div class="owl-stage-outer">
+          <carousel style="display: flex; align-items: flex-start; justify-content: center">
+            <div class="owl-item active" style="width: 380px;">
+              <div class="testimony">
+                <img src="/images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
+                <h3>Reannin Sirianni</h3>
+                <span class="sub-title"></span>
+                <p>“<em>I recently took an art class here. It was ridiculously amazing. I had so much fun! I loved it!! I will definitely be back!</em>”</p>
+              </div>
+            </div>
+            <div class="owl-item active" style="width: 380px;">
+              <div class="testimony">
+                <img src="/images/nellie_thompson.jpg" alt="Image" class="img-fluid">
+                <h3>Nellie Thompson</h3>
+                <span class="sub-title"></span>
+                <p>“<em>I met Stephanie at a market and loved her creations. Took the flowers and landscape class. Loved it and can’t wait to take more.</em>”</p>
+              </div>
+            </div>
+            <div class="owl-item active" style="width: 380px;">
+              <div class="testimony">
+                <img src="/images/julie_d_king.jpg" alt="Image" class="img-fluid">
+                <h3>Julie D. King</h3>
+                <span class="sub-title"></span>
+                <p>“<em>Attended the Inks, Resin, Crystals, Stones, and Glitter class and loved it. Stephanie is knowledgeable, very nice and super accommodating. I have already signed up for another class.</em>”</p>
+              </div>
+            </div>
+          </carousel>
+        </div>
+      </div>
     </div>
   </Layout>
 </template>
@@ -281,7 +287,45 @@
     metaInfo: {
       title: "Classes"
     },
+    data() {
+      return {
+        activeClass: false,
+        displayBookingForm: false,
+        displayQuestionForm: false
+      }
+    },
     mounted() {
     },
+    methods: {
+      setActiveClass(classModel) {
+        this.activeClass = true;
+        // Hide Booking / Question forms as they are only relevant to the selected class
+        this.hideBookingForm();
+        this.hideQuestionForm();
+
+        window.setTimeout(() => {
+          this.$refs.classDetails.scrollIntoView();
+        }, 333);
+
+      },
+      unsetActiveClass() {
+        this.activeClass = null;
+      },
+      showBookingForm() {
+        this.displayBookingForm = true;
+      },
+      hideBookingForm() {
+        this.displayBookingForm = null;
+      },
+      showQuestionForm() {
+        this.displayQuestionForm = true;
+        window.setTimeout(() => {
+          this.$refs.questionForm.scrollIntoView();
+        }, 333);
+      },
+      hideQuestionForm() {
+        this.displayQuestionForm = null;
+      }
+    }
   }
 </script>

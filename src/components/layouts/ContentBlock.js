@@ -38,6 +38,10 @@ export default {
       type: String,
       default: '',
     },
+    onLinkClicked: {
+      type: Function,
+      default: null,
+    },
     caption: {
       type: String,
       default: '',
@@ -57,6 +61,13 @@ export default {
     },
     compiledDescription() {
       return marked(this.description);
+    }
+  },
+  methods: {
+    linkClicked() {
+      if (typeof this.onLinkClicked === 'function') {
+        this.onLinkClicked();
+      }
     }
   }
 };

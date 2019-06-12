@@ -1,6 +1,6 @@
 <template>
   <div v-bind:class="classNameString">
-    <a href="#" class="d-block figure">
+    <a @click="linkClicked" class="d-block figure">
       <img
         :src="this.image"
         alt="Image"
@@ -14,7 +14,7 @@
     <br />
     <p class="text-muted" v-html="compiledDescription"></p>
     <p v-if="typeof this.linkText === 'string' && this.linkText.length > 0">
-      <a v-bind:href="this.link" v-bind:aria-label="this.linkText" class="btn btn-art-class btn-lg rounded-0"><i class="material-icons block-icon">brush</i> {{ this.linkText }}</a>
+      <a @click="linkClicked" v-bind:href="this.link" v-bind:aria-label="this.linkText" class="btn btn-art-class btn-lg rounded-0"><i class="material-icons block-icon">brush</i> {{ this.linkText }}</a>
     </p>
   </div>
 </template>
