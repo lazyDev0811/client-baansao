@@ -284,7 +284,7 @@ query {
 @media screen and (min-width: 768px) {
   .site-footer {
     position: absolute;
-    bottom: -39vh;
+    bottom: -40vh;
     width: 100vw;
   }
 }
@@ -292,7 +292,7 @@ query {
 
 .page-wrap {
   position: relative;
-  margin-bottom: -39vh;
+  margin-bottom: -40vh;
 }
 
 .page-wrap::after {
