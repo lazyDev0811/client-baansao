@@ -10196,7 +10196,6 @@ h6 {
 .site-blocks-cover {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
 }
 .site-blocks-cover.overlay {
   position: relative;

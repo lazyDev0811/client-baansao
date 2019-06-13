@@ -210,7 +210,7 @@ query {
 .site-blocks-cover {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center center;
 }
 .site-blocks-cover.overlay {
   position: relative;
@@ -348,7 +348,7 @@ query {
   width: 100%;
   mask: url('/images/hero-mask.svg') no-repeat;
   mask-size: cover;
-  mask-position: bottom center;
+  mask-position: center bottom;
 }
 
 .splash {
@@ -376,7 +376,35 @@ query {
   mask-size: contain;
 }
 
-.page-wrap {
+@media screen and (min-width: 1440px) {
+  .site-blocks-cover {
+    background-position: center center !important;
+  }
 
+  .hero-mask {
+    mask-position: center 20px;
+  }
 }
+
+@media screen and (min-width: 1920px) {
+  .site-blocks-cover {
+    background-position: center center !important;
+  }
+
+  .hero-mask {
+    mask-position: center -20px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .site-blocks-cover {
+    background-position: center center !important;
+  }
+
+  .hero-mask {
+    mask-position: center -60px;
+  }
+}
+
+
 </style>
