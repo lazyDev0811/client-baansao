@@ -264,7 +264,9 @@
       align-items: flex-start;
       justify-content: center;
     }
+  }
 
+  @media screen and (min-width: 1280px) {
     .class-action-buttons {
       display: block;
     }
