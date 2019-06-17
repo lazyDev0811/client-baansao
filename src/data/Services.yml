@@ -1,57 +1,80 @@
-title: Services
+title: Classes, Courses, and Escapes
 metaKeywords: >-
-  Coming soon...
+  Classes, Courses, and Escapes
 metaDescription: >-
-  Coming soon...
+  Classes, Courses, and Escapes
 services:
-  - id: websites
-    title: Websites
+  - id: ink-resin-crystals
+    title: Ink, Resin and Crystals Art Escape
     metaKeywords: >-
       Coming soon...
     metaDescription: >-
-      Coming soon...
-    summary:
+      Escape into the world of glassy resin, crystals and semi precious stones.
+    summary: >-
+      Escape into the world of glassy resin, crystals and semi precious stones.
     description: >-
-    hero:
-      - id: services-hero
-        title: >-
-          Next-gen websites
-        description: >-
-          We build web pages with the latest JAMStack and AMP HTML technology, optimized to deliver a superior mobile experience and higher conversion rates. Blue Collar sites offer blazing fast loading speeds favored by major platforms like Google, Facebook, and Twitter.  Accelerated mobile sites are without a doubt the wave of the future &ndash; contact us today to learn more.
-        image: /images/hero-michael.png
-        link: "/services"
-        linkText: Learn More
-        caption: Sean Huntington
-        subCaption: Principal Architect, Blue Collar
-    backup:
-      - id: branding
-        title: >-
-          Branded for you
-        description: >-
-          Your site reflects your unique vision for your brand. We will create a highly polished website that represents you and reflects your values.
-        image:
-        link:
-        linkText:
-        caption:
-        subCaption:
-      - id: design
-        title: >-
-          Creative design
-        description: >-
-          Image is everything. We produce stunning creative work that tells a story to your customer. When customers understand how associating with you can define who they are, they have a compelling reason to buy.
-        image:
-        link:
-        linkText:
-        caption:
-        subCaption:
-      - id: support
-        title: >-
-          Exceptional support
-        description: >-
-          We offer ongoing monthly support to continually improve your online business. No advanced technical knowledge of coding is required on your end, and we are always here to help!
-        image:
-        link:
-        linkText:
-        caption:
-        subCaption:
-
+      Escape into the world of glassy resin, crystals and semi precious
+      stones such as Jasper, Turquoise, hematite, quartz, and more. In
+      this three hour art escape, we will learn how to create a vivid
+      abstract alcohol ink painting on a birch panel, with glitter, semi
+      precious stones and crystals adding to the effects. We will learn
+      how to use resin on paintings, however your piece will have to be
+      picked up the next day or later (12 hour cure time). Experience is
+      not necessary, and all materials plus many choices of crystals
+      will be provided, and a handout will be emailed to you so you can
+      replicate the techniques we practiced. $95 per person. Centrally
+      located in Edmonton! Please message this account to register for
+      the art escape.
+    image: "/images/inks_resin_crystal_glitter.jpg"
+    link: "/classes"
+    linkText: Learn More
+    caption: ""
+    subCaption: ""
+  - id: ocean-in-resin
+    title: Ocean in Resin Painting
+    metaKeywords: >-
+      Coming soon...
+    metaDescription: >-
+      In this three hour art escape, we will paint a cross section of the ocean.
+    summary: >-
+      In this three hour art escape, we will paint a cross section of the ocean.
+    description: >-
+      In this three hour art escape, we will paint a cross section of
+      the ocean. Your water will have dimension and colour, foam and
+      movement. We will also paint an art tile to have some reference to
+      alcohol inks. Depending on your choice, the painting will measure
+      12X16 and the serving board will be 9X12. Cost for the three hour
+      workshop is $85 for the cutting board and $95 for the ocean art..
+      Your piece will have to be picked up at a later date, as it takes
+      overnight to dry. These classes fill up quickly due to the small
+      class size required. Please message on facebook to sign up.
+      Centrally located in Edmonton!
+    image: "/images/oceanbeach.jpg"
+    link: "/classes"
+    linkText: Learn More
+    caption: ""
+    subCaption: ""
+  - id: edgy-abstracts
+    title: Edgy Abstracts Art Escape
+    metaKeywords: >-
+      Coming soon...
+    metaDescription: >-
+      We will be “living on the edge” as we delve into a world of industrial, graffiti type painting.
+    summary: >-
+      We will be “living on the edge” as we delve into a world of industrial, graffiti type painting.
+    description: >-
+      We will be “living on the edge” as we delve into a world of
+      industrial, graffiti type painting. This is an exciting class
+      where you get to immerse yourself into creative places you haven’t
+      explored before. We will use various fluid mediums to create some
+      really cool paintings that will not only be rebellious but will be
+      exciting and beautiful to look at. You will paint at least 1
+      painting on 10X12 yupo paper. $85 per person, no experience
+      necessary – this is one three hour class. Please message me to
+      enquire about taking this course! Other dates are available on my
+      events tab on Facebook. Centrally located in Edmonton!
+    image: "/images/edgy_abstract.jpg"
+    link: "/classes"
+    linkText: Learn More
+    caption: ""
+    subCaption: ""
