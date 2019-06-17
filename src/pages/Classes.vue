@@ -247,7 +247,6 @@
   }
 
   .class-action-buttons > * {
-    display: block;
     flex: 1;
   }
 
