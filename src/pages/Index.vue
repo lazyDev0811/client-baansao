@@ -76,30 +76,14 @@
       <div class="container">
         <div class="row">
           <content-block-layout
+            v-for="service in getServices()"
+            :key="service.id"
             className="col-lg-4 col-md-6 mb-4 project-entry"
-            title="Ink, Resin and Crystals Art Escape"
-            description="Escape into the world of glassy resin, crystals and semi precious stones."
+            :title="service.title"
+            :description="service.summary"
             link="/classes"
             linkText="Learn More"
-            image="/images/inks_resin_crystal_glitter.jpg"
-            imageAlt=""
-          />
-          <content-block-layout
-            className="col-lg-4 col-md-6 mb-4 project-entry"
-            title="Ocean in Resin Painting"
-            description="In this three hour art escape, we will paint a cross section of the ocean."
-            link="/classes"
-            linkText="Learn More"
-            image="/images/oceanbeach.jpg"
-            imageAlt=""
-          />
-          <content-block-layout
-            className="col-lg-4 col-md-6 mb-4 project-entry"
-            title="Edgy Abstracts Art Escape"
-            description="We will be “living on the edge” as we delve into a world of industrial, graffiti type painting."
-            link="/classes"
-            linkText="Learn More"
-            image="/images/edgy_abstract.jpg"
+            :image="service.image"
             imageAlt=""
           />
         </div>
@@ -111,6 +95,9 @@
 <script>
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
+  // Import static data
+  import ServiceData from '~/data/Services.yml';
+
   export default {
     components: {
       ContentBlockLayout,
@@ -118,7 +105,24 @@
     metaInfo: {
       title: 'Wilder than the Wind - Edmonton'
     },
-    mounted() {
+    computed: {
+      serviceContent() {
+        return ServiceData;
+      }
     },
+    methods: {
+      getServices() {
+        return (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
+      },
+      getService(idx) {
+        let items = this.serviceContent.services;
+
+        if (items instanceof Array && items.length > idx) {
+          return items[idx];
+        }
+
+        return null
+      }
+    }
   }
 </script>
