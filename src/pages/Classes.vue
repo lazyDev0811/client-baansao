@@ -49,7 +49,7 @@
           </div>
           <div class="col-lg-5 ml-auto">
             <p v-html="activeService.description"></p>
-            <p class="mt-5">
+            <p class="class-action-buttons mt-5">
               <button class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i> Book this Class</button>&nbsp;
               <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i> Ask a Question</button>
             </p>
@@ -132,7 +132,7 @@
       </div>
       <div class="nonloop-block-13 owl-carousel owl-loaded owl-drag">
         <div class="owl-stage-outer">
-          <div style="display: flex; align-items: flex-start; justify-content: center">
+          <div class="owl-content-wrapper">
             <div class="owl-item active" style="width: 380px;">
               <div class="testimony">
                 <img src="/images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
@@ -238,3 +238,36 @@
     }
   }
 </script>
+
+<style scoped>
+  .class-action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .class-action-buttons > * {
+    display: block;
+    flex: 1;
+  }
+
+  .owl-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .owl-content-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .class-action-buttons {
+      display: block;
+    }
+  }
+</style>
