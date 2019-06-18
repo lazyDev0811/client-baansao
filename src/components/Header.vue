@@ -278,7 +278,17 @@
       justify-content: center;
       align-items: center;
     }
+
+    .display-menu .site-navbar-top {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .display-menu .site-menu {
+      margin-top: 4rem;
+    }
   }
+
   header #hamburger span {
     height: 2px;
     margin-top: 5px;
@@ -362,8 +372,9 @@
       transition: 0.33s ease;
       flex-direction: column;
     }
+
     .display-menu header #menu {
-      height: 100vh,
+      height: 100vh;
       /*height: calc(100vh - 48px);*/
       background: white;
       li {
@@ -468,14 +479,4 @@
     text-transform: uppercase;
     justify-content: space-between;
   }
-
-  .display-menu .site-navbar-top {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-
-  .display-menu .site-menu {
-    margin-top: 4rem;
-  }
-
 </style>
