@@ -39,12 +39,12 @@
             </a>
           </div>
           <div class="col-lg-4">
-            <a href="#" class="site-block-feature d-flex p-4 rounded mb-4">
+            <a href="/events" class="site-block-feature d-flex p-4 rounded mb-4">
               <div class="mr-3">
                 <i class="material-icons block-icon">calendar_today</i>
               </div>
               <div class="text">
-                <h2 class="font-weight-bold text-black">Events Calendar</h2>
+                <h2 class="font-weight-bold text-black">Class Schedules</h2>
                 <p>Coming soon!</p>
               </div>
             </a>
