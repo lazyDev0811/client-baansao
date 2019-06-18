@@ -127,7 +127,11 @@
   }
 </script>
 
-<style scoped>
+<style>
+  .project-entry {
+    text-align: center;
+  }
+
   .project-entry .img-fluid {
     height: 40vh;
   }
@@ -135,6 +139,20 @@
   @media screen and (min-width: 1280px) {
     .project-entry .img-fluid {
       height: 50vh;
+    }
+  }
+
+  .post-entry {
+    text-align: center;
+  }
+
+  .post-entry .img-fluid {
+    height: 30vh;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .post-entry .img-fluid {
+      height: 40vh;
     }
   }
 </style>
