@@ -14,7 +14,7 @@ services:
       per person, includes 10 high end semi precious stones in addition to other
       pieces.
     id: ink-resin-crystals
-    image: /images/inks_resin_crystal_glitter.jpg
+    image: /images/class-samples/IMG_0971.jpg
     link: /classes
     linkText: Learn More
     title: 'Ink, Resin and Crystals Art Escape'
@@ -32,7 +32,7 @@ services:
       picked up at a later date, as it takes overnight to dry. 11X14 and larger
       paintings are available at an extra cost.
     id: ocean-in-resin
-    image: /images/oceanbeach.jpg
+    image: /images/class-samples/IMG_6015.jpg
     link: /classes
     linkText: Learn More
     title: Ocean in Resin Painting
@@ -50,7 +50,7 @@ services:
       way. You will paint at least 1 and up to three paintings on 10X12 yupo
       paper. $85 per person, no experience necessary – One three hour class.
     id: edgy-abstracts
-    image: /images/edgy_abstract.jpg
+    image: /images/class-samples/IMG_6962.jpg
     link: /classes
     linkText: Learn More
     title: Edgy Abstracts Art Escape
@@ -74,7 +74,7 @@ services:
       inks themselves. Your painting skills will be well on their way with ONE
       three hour class.
     id: birch-trees
-    image: /images/trees.jpg
+    image: /images/class-samples/IMG_6442.jpg
     link: /classes
     linkText: Learn More
     title: Birch Trees Art Escape

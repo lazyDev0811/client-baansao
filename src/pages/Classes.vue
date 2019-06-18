@@ -2,7 +2,7 @@
   <Layout>
     <div
       class="site-blocks-cover overlay inner-page hero-mask"
-      style="background-image: url(/images/oceanbeach2.jpg);"
+      style="background-image: url(/images/class-samples/IMG_6005.jpg);"
     >
       <div class="container">
         <div class="row align-items-center">

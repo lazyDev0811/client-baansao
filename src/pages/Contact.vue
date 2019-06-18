@@ -2,7 +2,7 @@
   <Layout>
     <div
       class="site-blocks-cover overlay inner-page hero-mask"
-      style="background-image: url(/images/colorful_girl.jpg);"
+      style="background-image: url(/images/class-samples/IMG_5993.jpg);"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
