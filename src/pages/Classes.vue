@@ -239,7 +239,7 @@
         this.displayQuestionForm = null;
       }
     },
-    created() {
+    mounted() {
       // Grab the current path
       const { id } = this.$route.query;
 
