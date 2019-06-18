@@ -136,25 +136,25 @@
             <div class="owl-item active" style="width: 380px;">
               <div class="testimony">
                 <img src="/images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
-                <h3>Reannin Sirianni</h3>
+                <h3>Lisa C.</h3>
                 <span class="sub-title"></span>
-                <p>“<em>I recently took an art class here. It was ridiculously amazing. I had so much fun! I loved it!! I will definitely be back!</em>”</p>
+                <p>“<em>Stephanie’s class was super relaxed and super fun. We learned new techniques and new products and were able to make 2 beautiful pieces to take home. I loved the instruction and the freedom with which we could pick our own colours and embellishments. I will definitely be back!</em>”</p>
               </div>
             </div>
             <div class="owl-item active" style="width: 380px;">
               <div class="testimony">
                 <img src="/images/nellie_thompson.jpg" alt="Image" class="img-fluid">
-                <h3>Nellie Thompson</h3>
+                <h3>Linda C.</h3>
                 <span class="sub-title"></span>
-                <p>“<em>I met Stephanie at a market and loved her creations. Took the flowers and landscape class. Loved it and can’t wait to take more.</em>”</p>
+                <p>“<em>Registered in the Inks, Resin, Crystals, Stones and Glitter Art Escape. Stephanie was a fabulous instructor. She was welcoming, patient and inspiring. I was very happy with my painting and the experience. Would absolutely take another Wilder Than the Wind Creations class!</em>”</p>
               </div>
             </div>
             <div class="owl-item active" style="width: 380px;">
               <div class="testimony">
                 <img src="/images/julie_d_king.jpg" alt="Image" class="img-fluid">
-                <h3>Julie D. King</h3>
+                <h3>Reannin S.</h3>
                 <span class="sub-title"></span>
-                <p>“<em>Attended the Inks, Resin, Crystals, Stones, and Glitter class and loved it. Stephanie is knowledgeable, very nice and super accommodating. I have already signed up for another class.</em>”</p>
+                <p>“<em>I recently took an art class here. It was ridiculously amazing. I had so much fun! I felt like a little kid creating my artwork. Stephanie is such an awesome teacher she teaches you many practical techniques but also gives you plenty of time to play around make a mess and encourages you to have fun. Stephanie’s energy is fabulous!</em>”</p>
               </div>
             </div>
           </div>

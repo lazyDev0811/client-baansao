@@ -34,7 +34,7 @@
               </div>
               <div class="text">
                 <h2 class="font-weight-bold text-black">Art Workshops</h2>
-                <p>Check out our current classes and offerings.</p>
+                <p>Check out our current classes!</p>
               </div>
             </a>
           </div>
@@ -45,7 +45,7 @@
               </div>
               <div class="text">
                 <h2 class="font-weight-bold text-black">Events Calendar</h2>
-                <p>Explore our events page to find a class that will fit your schedule.</p>
+                <p>Coming soon!</p>
               </div>
             </a>
           </div>
