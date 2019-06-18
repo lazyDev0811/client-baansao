@@ -50,9 +50,23 @@
           <div class="col-lg-5 ml-auto">
             <p v-html="activeService.description"></p>
             <p class="class-action-buttons mt-5">
-              <button class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i> Book this Class</button>&nbsp;
+              <button @click="showBookingForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">calendar_today</i> Book this Class</button>&nbsp;
               <button @click="showQuestionForm" class="btn btn-secondary btn-lg rounded-0"><i class="material-icons">question_answer</i> Ask a Question</button>
             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pt-4" ref="bookingForm">
+        <div class="row">
+          <div class="col-12 text-center">
+            <span class="sub-title">{{ activeService.title }}</span>
+            <h2 class="font-weight-bold text-black mb-5">Class Schedule</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class='occsn_stack' id='occsn_stack_5301_9938'></div>
           </div>
         </div>
       </div>
@@ -179,6 +193,7 @@
     },
     data() {
       return {
+        occasionScript: null,
         activeService: null,
         displayBookingForm: false,
         displayQuestionForm: false
@@ -189,7 +204,6 @@
         return ServiceData;
       }
     },
-
     methods: {
       getServices() {
         return (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
@@ -222,6 +236,12 @@
       },
       showBookingForm() {
         this.displayBookingForm = true;
+
+        if (typeof window !== 'undefined') {
+          window.setTimeout(() => {
+            this.$refs.bookingForm.scrollIntoView();
+          }, 333);
+        }
       },
       hideBookingForm() {
         this.displayBookingForm = null;
@@ -248,6 +268,24 @@
       if (matchedServices.length > 0) service = matchedServices[0];
 
       if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
+
+      this.occasionScript = document.createElement('script');
+      this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
+      this.occasionScript.setAttribute('id', 'bc-occasion-calendar-script');
+      document.head.appendChild(this.occasionScript);
+    },
+    updated() {
+      // Loop over scripts and strip any occasion ones, there's no API to relaunch this script
+      for (let idx = 0; idx < document.scripts.length; idx++) {
+        if (document.scripts[idx].src === 'https://app.getoccasion.com/p/preboot.js') {
+          delete document.scripts[idx];
+          console.log('deleted occasion script');
+        }
+      }
+
+      this.occasionScript = document.createElement('script');
+      this.occasionScript.setAttribute('src', 'https://app.getoccasion.com/p/preboot.js');
+      document.head.appendChild(this.occasionScript);
     }
   }
 </script>
