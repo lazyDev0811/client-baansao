@@ -9812,10 +9812,10 @@ h6 {
   width: 100%;
   left: 0;
 }
-.site-navbar-wrap a {
+.site-navbar-top a {
   color: black;
 }
-.site-navbar-wrap .site-navbar-top {
+.site-navbar-top {
   font-size: 0.8rem;
 }
 

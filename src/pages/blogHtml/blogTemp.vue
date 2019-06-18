@@ -32,7 +32,7 @@
                 <a href="#" class="d-flex align-items-center ml-auto mr-4">
                   <span class="icon-phone mr-2"></span>
                   <span class="d-none d-md-inline-block"
-                    >+1 (604) 123-4567</span
+                    >+1 (780) 555-5555</span
                   >
                 </a>
                 <a href="#" class="d-flex align-items-center">
