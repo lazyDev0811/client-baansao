@@ -20,7 +20,7 @@
           <content-block-layout
             v-for="service in getServices()"
             :key="service.id"
-            className="col-lg-4 col-md-6 mb-4 project-entry"
+            className="col-lg-6 col-md-6 mb-6 project-entry"
             :title="service.title"
             :description="service.summary"
             link="/classes"
@@ -269,6 +269,16 @@
   @media screen and (min-width: 1280px) {
     .class-action-buttons {
       display: block;
+    }
+  }
+
+  .project-entry .img-fluid {
+    height: 40vh;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .project-entry .img-fluid {
+      height: 50vh;
     }
   }
 </style>
