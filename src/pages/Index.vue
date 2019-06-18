@@ -81,7 +81,7 @@
             className="col-lg-6 col-md-6 mb-6 project-entry"
             :title="service.title"
             :description="service.summary"
-            link="/classes"
+            :link="service.link"
             linkText="Learn More"
             :image="service.image"
             imageAlt=""

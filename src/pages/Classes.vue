@@ -23,7 +23,7 @@
             className="col-lg-6 col-md-6 mb-6 project-entry"
             :title="service.title"
             :description="service.summary"
-            link="/classes"
+            :link="service.link"
             linkText="More Details"
             :onLinkClicked="setActiveService.bind(this, getServices().indexOf(service))"
             :image="service.image"
@@ -189,6 +189,7 @@
         return ServiceData;
       }
     },
+
     methods: {
       getServices() {
         return (this.serviceContent.services instanceof Array) ? this.serviceContent.services : [];
@@ -209,6 +210,8 @@
         this.hideQuestionForm();
 
         if (typeof window !== 'undefined') {
+          // TODO: Maybe use some kind of route method?
+          window.history.pushState({}, this.activeService.title, `${this.$route.path}?id=${this.activeService.id}`);
           window.setTimeout(() => {
             this.$refs.classDetails.scrollIntoView();
           }, 333);
@@ -235,6 +238,16 @@
       hideQuestionForm() {
         this.displayQuestionForm = null;
       }
+    },
+    created() {
+      // Grab the current path
+      const { id } = this.$route.query;
+
+      let service = null;
+      let matchedServices = this.serviceContent.services.filter((service) => id === service.id);
+      if (matchedServices.length > 0) service = matchedServices[0];
+
+      if (service !== null) this.setActiveService(this.serviceContent.services.indexOf(service));
     }
   }
 </script>

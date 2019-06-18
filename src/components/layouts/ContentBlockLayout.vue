@@ -86,6 +86,8 @@ export default {
     linkClicked() {
       if (typeof this.onLinkClicked === 'function') {
         this.onLinkClicked();
+      } else if (typeof this.link === 'string' && this.link.length > 0) {
+        window.location = this.link;
       }
     }
   }

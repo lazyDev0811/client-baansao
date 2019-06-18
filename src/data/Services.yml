@@ -13,7 +13,7 @@ services:
       paintings are available at an extra cost.
     id: ocean-in-resin
     image: /images/class-samples/IMG_6015.jpg
-    link: /classes
+    link: /classes?id=ocean-in-resin
     linkText: Learn More
     title: Ocean in Resin Painting
     metaKeywords: 'In this three hour art escape, we will paint a cross section of the ocean.'
@@ -31,7 +31,7 @@ services:
       three hour class.
     id: birch-trees
     image: /images/class-samples/IMG_6442.jpg
-    link: /classes
+    link: /classes?id=birch-trees
     linkText: Learn More
     title: Birch Trees Art Escape
     metaKeywords: >-
@@ -56,7 +56,7 @@ services:
       pieces.
     id: ink-resin-crystals
     image: /images/class-samples/IMG_0971.jpg
-    link: /classes
+    link: /classes?id=ink-resin-crystals
     linkText: Learn More
     title: 'Ink, Resin and Crystals Art Escape'
     metaKeywords: 'Escape into the world of glassy resin, crystals and semi precious stones.'
@@ -74,7 +74,7 @@ services:
       paper. $85 per person, no experience necessary – One three hour class.
     id: edgy-abstracts
     image: /images/class-samples/IMG_6962.jpg
-    link: /classes
+    link: /classes?id=edgy-abstracts
     linkText: Learn More
     title: Edgy Abstracts Art Escape
     metaKeywords: >-
