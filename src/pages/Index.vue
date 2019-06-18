@@ -45,7 +45,7 @@
               </div>
               <div class="text">
                 <h2 class="font-weight-bold text-black">Class Schedules</h2>
-                <p>Coming soon!</p>
+                <p>View Summer 2019 Classes</p>
               </div>
             </a>
           </div>
