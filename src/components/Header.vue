@@ -53,7 +53,7 @@
         document.getElementsByTagName('body')[0].classList.remove('display-menu');
       }).bind(this));
 
-      /*let lastScroll = 0;
+      let lastScroll = 0;
       window.addEventListener('scroll', (() => {
         if (!document.getElementById('loader')) {
           this.hideMenu();
@@ -66,7 +66,7 @@
 
           lastScroll = window.scrollY;
         }
-      }).bind(this));*/
+      }).bind(this));
     },
     methods: {
       displayMenu() {
