@@ -4,7 +4,7 @@ export default {
   computed: {
     heroContent() {
       // TODO: Enforce pageData structure
-      let data = this.pageData.heros || HeroData;
+      let data = this.pageData.heroes || HeroData;
 
       return data;
     }
