@@ -1,17 +1,9 @@
 <template>
-  <div class="content-block testimonial-block-wrapper text-center sm-space-bottom-half">
-    <div v-bind:class="classNameString">
-      <div class="space-bottom-half g-services">
-        <p class="g-pstyle8 text-center" v-html="this.testimonial"></p>
-      </div>
-    </div>
-    <img class="circle space-bottom-half testimonial-profile-circle" v-bind:src="this.image" alt="" />
-    <div v-bind:class="classNameString">
-      <div class="g-services">
-        <p class="g-pstyle10 text-center"><strong>{{ this.reviewedBy }} - {{ this.position }}</strong></p>
-        <p class="g-pstyle10 text-center"><em>{{ this.organization }}</em></p>
-      </div>
-    </div>
+  <div v-bind:class="classNameString">
+    <img v-bind:src="this.image" alt="Image" class="img-fluid">
+    <h3>{{ this.reviewedBy }}</h3>
+    <span class="sub-title"></span>
+    <p>“<em v-html="this.testimonial"></em>”</p>
   </div>
 </template>
 

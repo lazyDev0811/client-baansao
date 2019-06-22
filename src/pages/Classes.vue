@@ -150,28 +150,55 @@
       <div class="nonloop-block-13 owl-carousel owl-loaded owl-drag">
         <div class="owl-stage-outer">
           <div class="owl-content-wrapper">
-            <div class="owl-item active" style="width: 380px;">
-              <div class="testimony">
-                <img src="/images/reannin_sirianni.jpg" alt="Image" class="img-fluid">
-                <h3>Lisa C.</h3>
-                <span class="sub-title"></span>
-                <p>“<em>Stephanie’s class was super relaxed and super fun. We learned new techniques and new products and were able to make 2 beautiful pieces to take home. I loved the instruction and the freedom with which we could pick our own colours and embellishments. I will definitely be back!</em>”</p>
+
+            <div
+              v-if="getTestimonial(0)"
+              class="owl-item active"
+              style="width: 380px;"
+            >
+              <testimonial-block-layout
+                className="testimony"
+                :reviewedBy="getTestimonial(0).reviewedBy"
+                :image="getTestimonial(0).image"
+                :testimonial="getTestimonial(0).testimonial"
+              />
+              <div
+                class="homepage-hero-action action-link-block text-center space-bottom">
+                <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
               </div>
             </div>
-            <div class="owl-item active" style="width: 380px;">
-              <div class="testimony">
-                <img src="/images/nellie_thompson.jpg" alt="Image" class="img-fluid">
-                <h3>Linda C.</h3>
-                <span class="sub-title"></span>
-                <p>“<em>Registered in the Inks, Resin, Crystals, Stones and Glitter Art Escape. Stephanie was a fabulous instructor. She was welcoming, patient and inspiring. I was very happy with my painting and the experience. Would absolutely take another Wilder Than the Wind Creations class!</em>”</p>
+
+            <div
+              v-if="getTestimonial(1)"
+              class="owl-item active"
+              style="width: 380px;"
+            >
+              <testimonial-block-layout
+                className="testimony"
+                :reviewedBy="getTestimonial(1).reviewedBy"
+                :image="getTestimonial(1).image"
+                :testimonial="getTestimonial(1).testimonial"
+              />
+              <div
+                class="homepage-hero-action action-link-block text-center space-bottom">
+                <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
               </div>
             </div>
-            <div class="owl-item active" style="width: 380px;">
-              <div class="testimony">
-                <img src="/images/julie_d_king.jpg" alt="Image" class="img-fluid">
-                <h3>Reannin S.</h3>
-                <span class="sub-title"></span>
-                <p>“<em>I recently took an art class here. It was ridiculously amazing. I had so much fun! I felt like a little kid creating my artwork. Stephanie is such an awesome teacher she teaches you many practical techniques but also gives you plenty of time to play around make a mess and encourages you to have fun. Stephanie’s energy is fabulous!</em>”</p>
+
+            <div
+              v-if="getTestimonial(2)"
+              class="owl-item active"
+              style="width: 380px;"
+            >
+              <testimonial-block-layout
+                className="testimony"
+                :reviewedBy="getTestimonial(2).reviewedBy"
+                :image="getTestimonial(2).image"
+                :testimonial="getTestimonial(2).testimonial"
+              />
+              <div
+                class="homepage-hero-action action-link-block text-center space-bottom">
+                <!--<a class="action-link space-top g-pstyle3" href="/lucas-profile" aria-label="My Work Experience">My Work Experience</a>-->
               </div>
             </div>
           </div>
@@ -183,10 +210,12 @@
 
 <script>
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
+  import TestimonialBlockLayout from '~/components/layouts/TestimonialBlockLayout.vue';
 
   // TODO: Implement page page that provides data interface?
   import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
+  import TestimonialMixin from '~/mixins/TestimonialMixin';
 
   // Import static data
   import ServiceData from '~/data/Services.yml';
@@ -194,11 +223,12 @@
   export default {
     components: {
       ContentBlockLayout,
+      TestimonialBlockLayout,
     },
     metaInfo: {
       title: "Classes"
     },
-    mixins: [HeroMixin, SectionMixin],
+    mixins: [HeroMixin, SectionMixin, TestimonialMixin],
     data() {
       return {
         pageTitle: ServiceData.title,
