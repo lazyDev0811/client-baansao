@@ -70,19 +70,19 @@ collections:
               - { label: "Caption", name: "caption", widget: "string", required: false }
               - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
           - name: "sections"
-              label: "Sections"
-              widget: "list"
-              fields:
-                - { label: "ID", name: "id", widget: "string" }
-                - { label: "Title", name: "title", widget: "string" }
-                - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-                - { label: "Summary", name: "summary", widget: "string" }
-                - { label: "Description", name: "description", widget: "markdown" }
-                - { label: "Link", name: "link", widget: "string" }
-                - { label: "Link Text", name: "linkText", widget: "string" }
-                - { label: "Image", name: "image", widget: "string" }
-                - { label: "Caption", name: "caption", widget: "string", required: false }
-                - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+            label: "Sections"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Summary", name: "summary", widget: "string" }
+              - { label: "Description", name: "description", widget: "markdown" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Link Text", name: "linkText", widget: "string" }
+              - { label: "Image", name: "image", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+              - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
 
   - name: "widgets"
     label: "Widgets"
