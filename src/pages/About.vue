@@ -1,8 +1,9 @@
 <template>
   <Layout>
     <div
+      v-if="getHeroById('page-hero') !== null"
       class="site-blocks-cover overlay inner-page hero-mask"
-      style="background-image: url(/images/class-samples/IMG_7111.jpg);"
+      :style="`background-image: url(${getHeroById('page-hero').image});`"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
@@ -10,7 +11,7 @@
         <div class="row align-items-center">
           <div class="col-md-10">
             <span class="sub-text"></span>
-            <h1>About Us</h1>
+            <h1>{{ getHeroById('page-hero').title }}</h1>
           </div>
         </div>
       </div>
@@ -64,6 +65,8 @@
 </template>
 
 <script>
+  // TODO: Implement page page that provides data interface?
+  import HeroMixin from '~/mixins/HeroMixin';
   import SectionMixin from '~/mixins/SectionMixin';
   //import TestimonialMixin from '~/mixins/TestimonialMixin';
 
@@ -74,7 +77,15 @@
     metaInfo: {
       title: "About"
     },
-    mixins: [SectionMixin],
+    mixins: [HeroMixin, SectionMixin],
+    data() {
+      return {
+        // TODO: Require this data format for pages
+        pageData: AboutData,
+        pageTitle: AboutData.title,
+        pageSubTitle: AboutData.subtitle
+      }
+    },
     computed: {
       pageSectionContent() {
         console.log('dumping about data');

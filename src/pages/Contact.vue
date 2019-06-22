@@ -1,8 +1,9 @@
 <template>
   <Layout>
     <div
+      v-if="getHeroById('page-hero') !== null"
       class="site-blocks-cover overlay inner-page hero-mask"
-      style="background-image: url(/images/class-samples/IMG_5993.jpg);"
+      :style="`background-image: url(${getHeroById('page-hero').image});`"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
@@ -10,7 +11,7 @@
         <div class="row align-items-center">
           <div class="col-md-10">
             <span class="sub-text"></span>
-            <h1>Contact Us</h1>
+            <h1>{{ getHeroById('page-hero').title }}</h1>
           </div>
         </div>
       </div>
@@ -21,7 +22,7 @@
         <div class="row">
           <div class="col-md-12 col-lg-12">
             <h2 class="site-heading text-black mb-5">
-              Get in Touch or Book a Class
+              {{ pageSubTitle }}
             </h2>
 
             <form
@@ -86,9 +87,24 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: "Contact"
-  }
-};
+  import HeroMixin from '~/mixins/HeroMixin';
+  import SectionMixin from '~/mixins/SectionMixin';
+
+  // Import static data
+  import ContactData from '~/data/Contact.yml';
+
+  export default {
+    metaInfo: {
+      title: "Contact"
+    },
+    mixins: [HeroMixin, SectionMixin],
+    data() {
+      return {
+        // TODO: Require this data format for pages
+        pageData: ContactData,
+        pageTitle: ContactData.title,
+        pageSubTitle: ContactData.subtitle
+      }
+    },
+  };
 </script>

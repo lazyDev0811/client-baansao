@@ -3,6 +3,13 @@ metaKeywords: >-
   Coming soon...
 metaDescription: >-
   Coming soon...
+heros:
+  - description:
+    id: page-hero
+    image: /images/class-samples/IMG_7111.jpg
+    link:
+    linkText:
+    title: About Us
 sections:
   - caption: ''
     description: >-

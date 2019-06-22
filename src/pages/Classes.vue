@@ -1,14 +1,17 @@
 <template>
   <Layout>
     <div
+      v-if="getHeroById('page-hero') !== null"
       class="site-blocks-cover overlay inner-page hero-mask"
-      style="background-image: url(/images/class-samples/IMG_6005.jpg);"
+      :style="`background-image: url(${getHeroById('page-hero').image});`"
+      data-aos="fade"
+      data-stellar-background-ratio="0.5"
     >
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-10">
             <span class="sub-text"></span>
-            <h1>Classes, Courses, and Escapes</h1>
+            <h1>{{ getHeroById('page-hero').title }}</h1>
           </div>
         </div>
       </div>
@@ -181,6 +184,10 @@
 <script>
   import ContentBlockLayout from '~/components/layouts/ContentBlockLayout.vue';
 
+  // TODO: Implement page page that provides data interface?
+  import HeroMixin from '~/mixins/HeroMixin';
+  import SectionMixin from '~/mixins/SectionMixin';
+
   // Import static data
   import ServiceData from '~/data/Services.yml';
 
@@ -191,8 +198,11 @@
     metaInfo: {
       title: "Classes"
     },
+    mixins: [HeroMixin, SectionMixin],
     data() {
       return {
+        pageTitle: ServiceData.title,
+        pageData: ServiceData,
         occasionScript: null,
         activeService: null,
         displayBookingForm: false,
