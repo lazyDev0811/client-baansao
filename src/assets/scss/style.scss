@@ -11,3 +11,8 @@ $text-muted: $gray-500;
 @import "site-navbar";
 /* Blocks */
 @import "site-blocks";
+
+/* Tweak styles for site */
+.site-blocks-cover h1 {
+  text-align: center;
+}

@@ -6,9 +6,6 @@
         <span></span>
         <span></span>
       </div>
-      <a href="/" aria-label="Home Page" class="logo-wrapper flex flex-center xs-flex-justify-center">
-        <img class="logo" src="/images/blue-collar-dev.png" alt="" />
-      </a>
 
       <nav id="menu" class="site-navbar align-items-center justify-content-center">
         <ul class="site-menu mb-0">
@@ -51,24 +48,36 @@
         document.getElementsByTagName('body')[0].classList.remove('display-menu');
       }).bind(this));
 
-      /*let lastScroll = 0;
+      let lastScroll = 0;
       if (typeof window !== 'undefined' && typeof document !== 'undefined') {
         window.addEventListener('scroll', (() => {
           if (!document.getElementById('loader')) {
-            this.hideMenu();
+            //this.hideMenu();
 
-            let header = document.getElementsByTagName('header')[0];
-
-            // TODO: This animation is flaky maybe something in greensock instead
-
-            if (Math.abs(lastScroll - window.scrollY) <= 5) return;
+            /*if (Math.abs(lastScroll - window.scrollY) <= 5) return;
 
             (window.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
 
-            lastScroll = window.scrollY;
+            lastScroll = window.scrollY;*/
           }
+
+          let header = document.getElementsByTagName('header')[0];
+          let headerHeight = 108;
+          if (document.body.getBoundingClientRect().width < 660) {
+            headerHeight = 54;
+          }
+
+          if (Math.abs(window.scrollY) >= headerHeight) {
+            header.classList.add('fixed');
+          } else {
+            if (header.classList.contains('fixed')) {
+              header.classList.remove('fixed');
+            }
+          }
+
+          lastScroll = window.scrollY;
         }).bind(this));
-      }*/
+      }
     },
     methods: {
       displayMenu() {
@@ -156,7 +165,7 @@
   .wrap {min-width: 320px; height: 100%;}
 
   header {
-    height: 108px;
+    height: 54px;
     display: flex;
     z-index: 200;
     padding: 0;
@@ -166,6 +175,11 @@
     top: 0;
     justify-content: center;
     /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);*/
+    transition: 0.33s;
+  }
+
+  header.fixed {
+    background-color: var(--cwhite);
     transition: 0.33s;
   }
 
@@ -368,7 +382,7 @@
     header #menu {
       width: 100%;
       display: block;
-      height: 0;
+      /*height: 0;*/
       transform-origin: 50% 0;
       transition: 0.33s ease;
       flex-direction: column;
@@ -482,16 +496,16 @@
     justify-content: space-between;
   }
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.5rem;
-  -moz-osx-font-smoothing: grayscale;
-}
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.5rem;
+    -moz-osx-font-smoothing: grayscale;
+  }
 </style>
