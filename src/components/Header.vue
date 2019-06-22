@@ -392,6 +392,9 @@
       height: 100vh;
       /*height: calc(100vh - 48px);*/
       background: white;
+      position: absolute;
+      top: 0; /* Required for Safari/iOS */
+      z-index: -1;
       li {
         height: var(--body_height_8);
         border-bottom: 1px solid var(--clightgrey);
