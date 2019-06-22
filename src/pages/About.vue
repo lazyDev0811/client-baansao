@@ -15,72 +15,47 @@
         </div>
       </div>
     </div>
-    <div class="site-section about-section">
+    <div v-if="getSection(0) !== null" class="site-section about-section">
       <div class="container">
         <div class="row align-items-center mb-5 pb-5">
           <div class="col-lg-7 img-years mb-5 mb-lg-0">
             <img
-              src="/images/stephanie_lane3.jpg"
+              :src="getSection(0).image"
               alt="Image"
               class="img-fluid brush-01"
             />
           </div>
-          <div class="col-lg-4 ml-auto">
-            <span class="sub-title">Art Escape Classes</span>
-            <h3 class="mb-4">Located in Central Edmonton</h3>
-            <p class="mb-5">
-              A trip to Florence in 2016 inspired the start of a full time art
-              career for Stephanie Lane – the founder of
-              <i>Wilder Than The Wind Creations</i>. <br />
-              She specializes in alcohol ink paintings and resin art, and
-              teaches what she knows to others. She also does mixed media work
-              with acrylics. <i>Wilder than the Wind</i> is proud to have its
-              studio in Little Italy, in the heart of Edmonton.
-            </p>
+          <div class="col-lg-4 ml-auto text-center">
+            <span class="sub-title" v-html="getSection(0).summary"></span>
+            <h3 class="mb-4" v-html="getSection(0).title"></h3>
+            <p class="mb-5" v-html="getSection(0).description"></p>
             <p>
               <a
-                href="https://www.facebook.com/wilderthanthewindcreations"
+                :href="getSection(0).link"
                 target="_blank"
-                class="btn btn-primary btn-lg rounded-0"
-                >Find Us on Facebook</a
-              >
+                class="btn btn-art-class btn-lg rounded-0">
+                <i class="material-icons block-icon">brush</i> {{ getSection(0).linkText }}
+              </a>
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-half">
-      <div
-        class="img-bg-1 brush-02"
-        style="background-image: url('/images/art_display_office.jpg');"
-      ></div>
+    <div v-if="getSection(1) !== null" class="site-section about-section">
       <div class="container">
-        <div class="row no-gutters align-items-stretch">
-          <div class="col-md-12 col-lg-7 ml-lg-auto py-5">
-            <span class="sub-title">Our Values</span>
-            <h2 class="font-weight-bold text-black font-secondary mb-4">
-              Sharing Our Values Through Art
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus aliquid eius facilis voluptatem eligendi magnam
-              accusamus vel commodi asperiores sint rem reprehenderit nobis
-              nesciunt veniam qui fugit doloremque numquam quod.
-            </p>
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur tempora distinctio ipsam nesciunt recusandae
-              repellendus asperiores amet.
-            </p>
-
-            <ul class="list-unstyled ul-check primary">
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Consectetur tempora distinctio ipsam</li>
-              <li>Recusandae repellendus asperiores amet</li>
-              <li>Lorem ipsum dolor sit amet consectetur</li>
-              <li>Consectetur tempora distinctio ipsam</li>
-            </ul>
+        <div class="row align-items-center mb-5 pb-5">
+          <div class="col-lg-4 ml-auto text-center">
+            <span class="sub-title" v-html="getSection(1).summary"></span>
+            <h3 class="mb-4" v-html="getSection(1).title"></h3>
+            <p class="mb-5" v-html="getSection(1).description"></p>
+          </div>
+          <div class="col-lg-7 img-years mb-5 mb-lg-0">
+            <img
+              :src="getSection(1).image"
+              alt="Image"
+              class="img-fluid brush-01"
+            />
           </div>
         </div>
       </div>
@@ -89,9 +64,39 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: "About"
-  }
-};
+  import SectionMixin from '~/mixins/SectionMixin';
+  //import TestimonialMixin from '~/mixins/TestimonialMixin';
+
+  // Import static data
+  import AboutData from '~/data/Company.yml';
+
+  export default {
+    metaInfo: {
+      title: "About"
+    },
+    mixins: [SectionMixin],
+    computed: {
+      pageSectionContent() {
+        console.log('dumping about data');
+        console.log(AboutData);
+        return (AboutData.hasOwnProperty('sections')) ? AboutData.sections : [];
+      }
+    }
+  };
 </script>
+
+<style>
+  .site-half .img-bg-1 {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 20%;
+  }
+</style>

@@ -1,12 +1,32 @@
-title: Company
-items:
-  - description: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    title: Lorem ipsum dolor
-    metaKeywords: >-
-      Coming soon...
-    metaDescription: >-
-      Coming soon...
+title: About Us
+metaKeywords: >-
+  Coming soon...
+metaDescription: >-
+  Coming soon...
+sections:
+  - caption: ''
+    description: >-
+      A trip to Florence in 2016 inspired the start of a full time art career for Stephanie Lane – the founder of Wilder Than The Wind Creations.
+      She specializes in alcohol ink paintings and resin art, and teaches what she knows to others. She also does mixed media work with acrylics. Wilder than the Wind is proud to have its studio in Little Italy, in the heart of Edmonton.
+    id: about-us-section-01
+    image: /images/stephanie_lane3.jpg
+    link: https://www.facebook.com/wilderthanthewindcreations
+    linkText: Find Us On Facebook
+    title: Located in Central Edmonton
+    metaKeywords: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    metaDescription: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    subCaption: ''
+    summary: 'In this three hour art escape, we will paint a cross section of the ocean.'
+  - caption: ''
+    description: >-
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquid eius facilis voluptatem eligendi magnam
+      accusamus vel commodi asperiores sint rem reprehenderit nobis nesciunt veniam qui fugit doloremque numquam quod.
+    id: about-us-section-02
+    image: /images/art_display_office.jpg
+    link:
+    linkText:
+    title: Our Values
+    metaKeywords: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    metaDescription: 'In this three hour art escape, we will paint a cross section of the ocean.'
+    subCaption: ''
+    summary: 'Our Values'
