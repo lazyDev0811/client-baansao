@@ -18,25 +18,23 @@
           <li><a href="/contact" aria-label="Contact" v-on:click="hideDropMenu()">Contact Us</a></li>
         </ul>
         <div class="site-navbar-top d-flex">
-          <div>
-            <a
-              href="https://www.facebook.com/wilderthanthewindcreations"
-              class="p-2 pl-0"><span class="icon-facebook"></span></a>
-            <a
-              href="https://www.instagram.com/creativeescapesyeg"
-              class="p-2 pl-0"><span class="icon-instagram"></span></a>
-          </div>
-          <div>
-            <div class="d-flex ml-auto">
-              <a href="#" class="d-flex align-items-center ml-auto mr-4">
-                <span class="icon-phone mr-2"></span>
-                <span class="d-none d-md-inline-block">+1 (780) 555-5555</span>
-              </a>
-              <a href="#" class="d-flex align-items-center">
-                <span class="icon-envelope mr-2"></span>
-                <span class="d-none d-md-inline-block">wilderthanthewindcreations@gmail.com</span>
-              </a>
-            </div>
+          <div class="d-flex ml-auto">
+            <a href="https://www.instagram.com/creativeescapesyeg" class="d-flex align-items-center ml-auto mr-4">
+              <span class="icon-instagram mr-2"></span>
+              <!--<span class="d-none d-md-inline-block">@creativeescapesyeg</span>-->
+            </a>
+            <a href="https://www.facebook.com/wilderthanthewindcreations" class="d-flex align-items-center ml-auto mr-4">
+              <span class="icon-facebook mr-2"></span>
+              <!--<span class="d-none d-md-inline-block">wilderthanthewindcreations</span>-->
+            </a>
+            <a href="#" class="d-flex align-items-center ml-auto mr-4">
+              <span class="icon-phone mr-2"></span>
+              <span class="d-none d-lg-inline-block">+1 (780) 555-5555</span>
+            </a>
+            <a href="#" class="d-flex align-items-center">
+              <span class="icon-envelope mr-2"></span>
+              <span class="d-none d-lg-inline-block">wilderthanthewindcreations@gmail.com</span>
+            </a>
           </div>
         </div>
       </nav>
@@ -53,20 +51,24 @@
         document.getElementsByTagName('body')[0].classList.remove('display-menu');
       }).bind(this));
 
-      let lastScroll = 0;
-      window.addEventListener('scroll', (() => {
-        if (!document.getElementById('loader')) {
-          this.hideMenu();
+      /*let lastScroll = 0;
+      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+        window.addEventListener('scroll', (() => {
+          if (!document.getElementById('loader')) {
+            this.hideMenu();
 
-          let header = document.getElementsByTagName('header')[0];
+            let header = document.getElementsByTagName('header')[0];
 
-          if (Math.abs(lastScroll - window.scrollY) <= 5) return;
+            // TODO: This animation is flaky maybe something in greensock instead
 
-          (window.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
+            if (Math.abs(lastScroll - window.scrollY) <= 5) return;
 
-          lastScroll = window.scrollY;
-        }
-      }).bind(this));
+            (window.scrollY < lastScroll) ? header.style.top = '0': header.style.top = '-' + header.clientHeight + 'px';
+
+            lastScroll = window.scrollY;
+          }
+        }).bind(this));
+      }*/
     },
     methods: {
       displayMenu() {
@@ -206,17 +208,16 @@
     margin-right: 20px;
     i {width: 12px; height: 12px; background-color: var(--cgrey);}
     a {
-      color: var(--cgrey);
-      cursor: pointer;
-      display: block;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 12px;
-      font-weight: 700;
-      /*margin-bottom: 10px;*/
-      &:hover {
-        text-decoration: none;
-      }
+        color: var(--cgrey);
+        cursor: pointer;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.9rem;
+        font-weight: normal;
+        &:hover {
+          text-decoration: none;
+        }
     }
   }
   header .drop-menu {
@@ -290,20 +291,20 @@
   }
 
   header #hamburger span {
-    height: 2px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    height: 3px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     background-color: var(--cgrey);
     display: block;
     transition: 0.33s;
-    &:nth-child(1) {width: 12px;}
-    &:nth-child(2) {width: 24px;}
-    &:nth-child(3) {width: 12px;}
+    &:nth-child(1) {width: 32px;}
+    &:nth-child(2) {width: 32px;}
+    &:nth-child(3) {width: 32px;}
   }
   .display-menu header #hamburger {
-    span:nth-child(1) {transform: rotate(45deg) translate(2px, 1px); }
+    span:nth-child(1) {transform: rotate(45deg) translate(8px, 8px); }
     span:nth-child(2) {transform: rotate(-45deg) ;}
-    span:nth-child(3) {transform: rotate(45deg) translate(6px, -9px);}
+    span:nth-child(3) {transform: rotate(45deg) translate(-8px, -8px);}
   }
   #loader {
     display: block;
@@ -401,6 +402,7 @@
         height: 100%;
         width: 100%;
         display: block;
+
         &:hover {
           color: var(--cwhite);
           background-color: grey;
@@ -479,4 +481,17 @@
     text-transform: uppercase;
     justify-content: space-between;
   }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.5rem;
+  -moz-osx-font-smoothing: grayscale;
+}
 </style>
