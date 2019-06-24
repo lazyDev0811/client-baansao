@@ -83,6 +83,21 @@ collections:
               - { label: "Image", name: "image", widget: "string" }
               - { label: "Caption", name: "caption", widget: "string", required: false }
               - { label: "Sub-Caption", name: "subCaption", widget: "string", required: false }
+              
+  - name: "blogs"
+    label: "Blogs"
+    folder: "blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "title", name: "title", widget: "string" }
+      - { label: "date", name: "date", widget: "date" }
+      - { label: "slug", name: "slug", widget: "string" }
+      - { label: "image", name: "image", widget: "string" }
+      - { label: "caption", name: "caption", widget: "string" }
+      - { label: "summary", name: "summary", widget: "string" }
+      - { label: "body", name: "body", widget: "markdown" }
+
 
   - name: "widgets"
     label: "Widgets"
