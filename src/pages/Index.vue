@@ -69,9 +69,9 @@
     <div class="site-section pt-0">
       <div class="container pt-4">
         <div class="row mt-4 mb-4 pt-4">
-          <div class="col-lg-11 ml-auto">
+          <div class="col-lg-11 ml-auto text-center">
             <span class="sub-title">What Types of Classes Do We Offer?</span>
-            <h2 class="font-weight-bold text-black mb-5">Popular Art Workshops:</h2>
+            <h2 class="font-weight-bold text-black mb-5">Popular Art Workshops</h2>
           </div>
         </div>
       </div>
