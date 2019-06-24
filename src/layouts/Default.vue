@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-md-6 col-lg-6">
                   <ul class="list-unstyled">
-                    <li><g-link to="/blog">Blog</g-link></li>
+                    <li><g-link to="/blog-posts">Blog</g-link></li>
                     <li><g-link to="/about">About Us</g-link></li>
                     <li><g-link to="/contact">Contact Us</g-link></li>
                   </ul>
