@@ -1,5 +1,7 @@
 <template>
-  <Layout>
+  <Layout
+    :displayPosts="true"
+  >
     <div class="hero-wrapper">
       <video autoplay muted loop playsinline id="bg-video" class="hero-mask">
         <source src="/video/032715490-dandelion-blowing-slow-motion_H264_420-web-xl.mp4" type="video/mp4">

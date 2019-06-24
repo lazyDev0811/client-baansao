@@ -4,7 +4,7 @@
     <div class="page-wrap">
       <slot />
 
-      <div class="site-section">
+      <div class="site-section" v-if="displayPosts">
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
@@ -14,41 +14,20 @@
           </div>
           <div class="row mb-5">
             <content-block-layout
+              v-for="edge in $static.posts.edges" :key="edge.node.id"
               className="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry"
-              title="The importance of art in living a stress-free life."
-              description=""
-              link="/classes"
+              :title="edge.node.title"
+              :description="edge.node.summary"
+              :link="edge.node.path"
               linkText="Read Article"
-              image="/images/girl_blue_paint.jpg"
-              imageAlt=""
-              datePublished="23, January 2019"
-            />
-
-            <content-block-layout
-              className="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry"
-              title="Love trumps hate – or how art helps us transcend the division of politics."
-              description=""
-              link="/classes"
-              linkText="Read Article"
-              image="/images/art_gallery.jpg"
-              imageAlt=""
-              datePublished="23, January 2019"
-            />
-
-            <content-block-layout
-              className="col-lg-4 col-md-6 mb-4 mb-lg-0 post-entry"
-              title="3 tips for professionally molding beautiful trinkets from resin."
-              description=""
-              link="/classes"
-              linkText="Read Article"
-              image="/images/inks_resin_crystal_glitter.jpg"
-              imageAlt=""
-              datePublished="23, January 2019"
+              :image="edge.node.image"
+              :imageAlt="edge.node.caption"
+              :datePublished="edge.node.date"
             />
           </div>
           <div class="row mt-5 text-center">
             <div class="col-12">
-              <p><a href="blog.html" class="btn btn-secondary btn-lg rounded-0">View All Posts</a></p>
+              <p><a href="/blog-posts" class="btn btn-secondary btn-lg rounded-0">View All Posts</a></p>
             </div>
           </div>
         </div>
@@ -119,17 +98,31 @@
     metaInfo: {
       title: 'Wilder than the Wind - Edmonton'
     },
+    props: {
+      displayPosts: Boolean
+    },
     mounted() {
     },
   }
 </script>
 
 <static-query>
-query {
-  metaData {
-    siteName
+  query BlogPosts {
+    posts: allBlogPost {
+      edges {
+        node {
+          title
+          date
+          image
+          caption
+          summary
+          content
+          path
+          slug
+        }
+      }
+    }
   }
-}
 </static-query>
 
 <style>
@@ -331,6 +324,4 @@ query {
     mask-position: center -60px;
   }
 }
-
-
 </style>
